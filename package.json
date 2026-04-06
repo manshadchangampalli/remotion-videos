@@ -8,6 +8,7 @@
   "dependencies": {
     "@remotion/captions": "^4.0.445",
     "@remotion/cli": "4.0.445",
+    "@remotion/google-fonts": "^4.0.446",
     "@remotion/install-whisper-cpp": "^4.0.445",
     "@remotion/tailwind-v4": "4.0.445",
     "react": "19.2.3",

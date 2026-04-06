@@ -4,77 +4,469 @@ import {
   Img,
   staticFile,
   Sequence,
+  useCurrentFrame,
+  useVideoConfig,
+  spring,
+  interpolate,
 } from "remotion";
+import { fontFamily } from "./fonts";
+
+// Sub-section 1: US Military analogy (0–190 frames, ~6.3s)
+const MilitaryAnalogy: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const titleSpring = spring({ frame, fps, config: { damping: 80, stiffness: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [-70, 0]);
+  const titleOpacity = interpolate(frame, [0, 15], [0, 1], { extrapolateRight: "clamp" });
+
+  const imgSpring = spring({ frame: frame - 18, fps, config: { damping: 80 } });
+  const imgScale = interpolate(imgSpring, [0, 1], [0.88, 1]);
+  const imgOpacity = interpolate(frame, [18, 38], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  const captionSpring = spring({ frame: frame - 55, fps, config: { damping: 80 } });
+  const captionY = interpolate(captionSpring, [0, 1], [40, 0]);
+  const captionOpacity = interpolate(frame, [55, 72], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px 48px",
+        gap: 24,
+        fontFamily,
+      }}
+    >
+      <h2
+        style={{
+          fontSize: 68,
+          fontWeight: 900,
+          textTransform: "uppercase",
+          color: "#2563eb",
+          margin: 0,
+          textAlign: "center",
+          fontFamily,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+        }}
+      >
+        One App. One Boss. 🎯
+      </h2>
+
+      <div
+        style={{
+          transform: `scale(${imgScale})`,
+          opacity: imgOpacity,
+          borderRadius: 24,
+          overflow: "hidden",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
+        }}
+      >
+        {/* trump-usa-military.png is 1024×1536 portrait — display at 2:3 ratio */}
+        <Img
+          src={staticFile("trump-usa-military.png")}
+          style={{ width: 560, height: 840, objectFit: "cover", display: "block" }}
+        />
+      </div>
+
+      <p
+        style={{
+          fontSize: 38,
+          fontStyle: "italic",
+          color: "#6b7280",
+          margin: 0,
+          textAlign: "center",
+          fontFamily,
+          transform: `translateY(${captionY}px)`,
+          opacity: captionOpacity,
+        }}
+      >
+        Everything runs from one command center
+      </p>
+    </AbsoluteFill>
+  );
+};
+
+// Sub-section 2: One Codebase with architecture diagram (190–383 frames, ~6.4s)
+const OneCodebase: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const titleSpring = spring({ frame, fps, config: { damping: 80, stiffness: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [-60, 0]);
+  const titleOpacity = interpolate(frame, [0, 15], [0, 1], { extrapolateRight: "clamp" });
+
+  const imgSpring = spring({ frame: frame - 20, fps, config: { damping: 15, stiffness: 180 } });
+  const imgScale = interpolate(imgSpring, [0, 1], [0.7, 1]);
+  const imgOpacity = interpolate(frame, [20, 40], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  const deploySpring = spring({ frame: frame - 80, fps, config: { damping: 10, stiffness: 220 } });
+  const deployScale = interpolate(deploySpring, [0, 1], [0, 1]);
+  const deployOpacity = interpolate(frame, [80, 96], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px 48px",
+        gap: 28,
+        fontFamily,
+      }}
+    >
+      <h2
+        style={{
+          fontSize: 72,
+          fontWeight: 900,
+          textTransform: "uppercase",
+          color: "#111",
+          margin: 0,
+          textDecoration: "underline",
+          textDecorationColor: "#3b82f6",
+          textDecorationThickness: 4,
+          fontFamily,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+        }}
+      >
+        One Codebase
+      </h2>
+
+      <div
+        style={{
+          transform: `scale(${imgScale})`,
+          opacity: imgOpacity,
+          borderRadius: 20,
+          overflow: "hidden",
+          border: "2px solid rgba(0,0,0,0.08)",
+          boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+        }}
+      >
+        {/* monolithic-architecture.png is 572×1024 */}
+        <Img
+          src={staticFile("monolithic-architecture.png")}
+          style={{ width: 450, height: 806, objectFit: "contain", display: "block", background: "#fff" }}
+        />
+      </div>
+
+      <div
+        style={{
+          background: "rgba(59,130,246,0.12)",
+          border: "3px solid #3b82f6",
+          borderRadius: 20,
+          padding: "20px 48px",
+          transform: `scale(${deployScale})`,
+          opacity: deployOpacity,
+        }}
+      >
+        <span style={{ fontSize: 44, fontWeight: 900, color: "#2563eb", fontFamily }}>
+          ONE DEPLOY 🚢
+        </span>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// Reusable horizontal company card that animates in at enterFrame
+const CompanyRow: React.FC<{
+  name: string;
+  nameColor: string;
+  imgFile: string | null;
+  imgW: number;
+  imgH: number;
+  imgBg?: string;
+  fact: string;
+  enterFrame: number;
+}> = ({ name, nameColor, imgFile, imgW, imgH, imgBg, fact, enterFrame }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const rowSpring = spring({
+    frame: frame - enterFrame,
+    fps,
+    config: { damping: 15, stiffness: 180 },
+  });
+  const rowY = interpolate(rowSpring, [0, 1], [70, 0]);
+  const rowOpacity = interpolate(frame, [enterFrame, enterFrame + 20], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  return (
+    <div
+      style={{
+        width: 940,
+        display: "flex",
+        alignItems: "center",
+        gap: 28,
+        padding: "24px 36px",
+        background: `${nameColor}0d`,
+        border: `2px solid ${nameColor}30`,
+        borderRadius: 20,
+        transform: `translateY(${rowY}px)`,
+        opacity: rowOpacity,
+      }}
+    >
+      {/* Left: name + fact */}
+      <div style={{ flex: 1 }}>
+        <div style={{ fontSize: 52, fontWeight: 900, color: nameColor, fontFamily, lineHeight: 1 }}>
+          {name}
+        </div>
+        <div style={{ fontSize: 30, color: "#9ca3af", fontStyle: "italic", marginTop: 8, fontFamily }}>
+          {fact}
+        </div>
+      </div>
+      {/* Right: logo */}
+      <div
+        style={{
+          background: imgBg ?? "transparent",
+          padding: imgBg ? 16 : 0,
+          borderRadius: imgBg ? 12 : 0,
+          flexShrink: 0,
+        }}
+      >
+        {imgFile ? (
+          <Img
+            src={staticFile(imgFile)}
+            style={{ width: imgW, height: imgH, objectFit: "contain", display: "block" }}
+          />
+        ) : (
+          <div style={{ width: imgW, height: imgH, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 52, fontWeight: 900, color: nameColor, fontFamily }}>
+            SHOPIFY
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+// Sub-section 3: Companies — logos appear when narrator mentions them (383–617)
+// Stack Overflow at frame 0, Shopify at +39, Basecamp at +70
+const MonolithExamples: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const titleSpring = spring({ frame, fps, config: { damping: 80 } });
+  const titleY = interpolate(titleSpring, [0, 1], [-50, 0]);
+  const titleOpacity = interpolate(frame, [0, 15], [0, 1], { extrapolateRight: "clamp" });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 28,
+        padding: "40px 60px",
+        fontFamily,
+      }}
+    >
+      <h2
+        style={{
+          fontSize: 72,
+          fontWeight: 900,
+          textTransform: "uppercase",
+          color: "#111",
+          margin: 0,
+          fontFamily,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+        }}
+      >
+        Built on Monoliths 🏛️
+      </h2>
+
+      {/* Stack Overflow — mentioned first at frame 0 */}
+      <CompanyRow
+        name="Stack Overflow"
+        nameColor="#f48024"
+        imgFile="stackoverflow.png"
+        imgW={260}
+        imgH={173}
+        imgBg="#fafafa"
+        fact="Serving 66M+ devs. One monolith."
+        enterFrame={0}
+      />
+
+      {/* Shopify — mentioned at +39 frames */}
+      <CompanyRow
+        name="Shopify"
+        nameColor="#96bf48"
+        imgFile={null}
+        imgW={220}
+        imgH={60}
+        fact="$100B+ company. Started as one Rails app."
+        enterFrame={39}
+      />
+
+      {/* Basecamp — mentioned at +70 frames */}
+      <CompanyRow
+        name="Basecamp"
+        nameColor="#1f2937"
+        imgFile="basecamp.png"
+        imgW={110}
+        imgH={110}
+        fact="Team PM tool. Still a happy monolith."
+        enterFrame={70}
+      />
+    </AbsoluteFill>
+  );
+};
+
+// Sub-section 4: The Bug / War Zone (617+)
+const BugZone: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const bgOpacity = interpolate(frame, [0, 20], [0, 0.25], { extrapolateRight: "clamp" });
+
+  const bugSpring = spring({ frame, fps, config: { damping: 8, stiffness: 300 } });
+  const bugScale = interpolate(bugSpring, [0, 1], [0, 1]);
+  const bugPulse = interpolate(Math.sin((frame / fps) * Math.PI * 2.2), [-1, 1], [0.9, 1.0]);
+
+  const titleSpring = spring({ frame: frame - 18, fps, config: { damping: 80 } });
+  const titleY = interpolate(titleSpring, [0, 1], [60, 0]);
+  const titleOpacity = interpolate(frame, [18, 35], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  const crashSpring = spring({ frame: frame - 40, fps, config: { damping: 10, stiffness: 280 } });
+  const crashScale = interpolate(crashSpring, [0, 1], [0.4, 1]);
+  const crashOpacity = interpolate(frame, [40, 55], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  const warSpring = spring({ frame: frame - 65, fps, config: { damping: 80 } });
+  const warY = interpolate(warSpring, [0, 1], [50, 0]);
+  const warOpacity = interpolate(frame, [65, 80], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 80,
+        background: `rgba(127,29,29,${bgOpacity})`,
+        fontFamily,
+      }}
+    >
+      <div
+        style={{
+          fontSize: 160,
+          fontWeight: 900,
+          color: "#dc2626",
+          textTransform: "uppercase",
+          lineHeight: 1,
+          transform: `scale(${bugScale * bugPulse})`,
+          filter: "drop-shadow(0 0 40px rgba(220,38,38,0.7))",
+        }}
+      >
+        BUG ❌
+      </div>
+
+      <h3
+        style={{
+          fontSize: 64,
+          fontWeight: 900,
+          textAlign: "center",
+          color: "#111",
+          lineHeight: 1.2,
+          marginTop: 16,
+          marginBottom: 32,
+          fontFamily,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+        }}
+      >
+        ONE BUG IN <br />
+        <span style={{ color: "#ef4444" }}>PAYMENTS?</span>
+      </h3>
+
+      <div
+        style={{
+          padding: 32,
+          border: "4px solid #dc2626",
+          background: "#dc2626",
+          color: "#fff",
+          borderRadius: 24,
+          transform: `scale(${crashScale})`,
+          opacity: crashOpacity,
+        }}
+      >
+        <p style={{ fontSize: 64, fontWeight: 900, textTransform: "uppercase", fontStyle: "italic", margin: 0, fontFamily }}>
+          App Crashed!
+        </p>
+      </div>
+
+      <p
+        style={{
+          marginTop: 48,
+          fontSize: 44,
+          fontFamily,
+          textTransform: "uppercase",
+          color: "#f87171",
+          fontWeight: 700,
+          background: "#fff",
+          padding: "12px 20px",
+          borderRadius: 8,
+          transform: `translateY(${warY}px)`,
+          opacity: warOpacity,
+        }}
+      >
+        Codebase = War Zone ⚔️
+      </p>
+    </AbsoluteFill>
+  );
+};
 
 export const Scene2Monolith: React.FC = () => {
   return (
-    <AbsoluteFill className="bg-black flex items-center justify-center">
-      
-      {/* 1. US Military Analogy */}
-      <Sequence from={0} durationInFrames={300}>
-        <AbsoluteFill className="flex items-center justify-center p-10">
-          <div className="text-center z-10 bg-black/40 p-10 backdrop-blur-md border border-white/10 rounded-2xl">
-            <h2 className="text-6xl font-bold uppercase tracking-tight text-brand-primary mb-10">
-               Monolith <br /> US Military
-            </h2>
-            <Img 
-              src={staticFile("trump-usa-military.png")} 
-              className="w-[800px] h-[500px] object-cover rounded-3xl shadow-glow mb-10"
-            />
-            <p className="text-4xl italic text-gray-400">Everything coordinated from one base</p>
-          </div>
-        </AbsoluteFill>
+    <AbsoluteFill style={{ backgroundColor: "#fff", fontFamily }}>
+      {/* 0–190: Military analogy (audio 9.0–15.4s) */}
+      <Sequence from={0} durationInFrames={190}>
+        <MilitaryAnalogy />
       </Sequence>
 
-      {/* 2. In Code Details */}
-      <Sequence from={300} durationInFrames={300}>
-        <AbsoluteFill className="flex items-center justify-center">
-          <div className="w-[800px] border-4 border-white/20 p-12 rounded-[40px] bg-white/5 backdrop-blur-sm shadow-2xl">
-            <h3 className="text-6xl font-black mb-10 uppercase text-center underline decoration-brand-primary">One Codebase</h3>
-            <div className="grid grid-cols-2 gap-8 text-4xl font-mono uppercase text-gray-300">
-               <div className="p-6 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4"><span>📦</span> UI</div>
-               <div className="p-6 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4"><span>📦</span> AUTH</div>
-               <div className="p-6 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4"><span>📦</span> PAYMENTS</div>
-               <div className="p-6 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4"><span>📦</span> ORDERS</div>
-            </div>
-            <div className="mt-12 bg-brand-primary/20 p-8 border-2 border-brand-primary rounded-2xl text-center">
-              <span className="text-4xl font-black text-brand-primary">ONE DEPLOY 🚢</span>
-            </div>
-          </div>
-        </AbsoluteFill>
+      {/* 190–383: One codebase (audio 15.4–21.8s) */}
+      <Sequence from={190} durationInFrames={193}>
+        <OneCodebase />
       </Sequence>
 
-      {/* 3. Examples */}
-      <Sequence from={600} durationInFrames={300}>
-        <AbsoluteFill className="flex flex-col items-center justify-center gap-16">
-          <h2 className="text-7xl font-black uppercase tracking-tight italic">Built on Monoliths</h2>
-          <div className="flex flex-wrap justify-center gap-12 max-w-[900px]">
-            <div className="bg-white/10 p-10 rounded-[40px] border border-white/20">
-              <Img src={staticFile("stackoverflow.png")} className="h-40 object-contain" />
-            </div>
-            <div className="bg-white/10 p-10 rounded-[40px] border border-white/20">
-              <Img src={staticFile("basecamp.png")} className="h-40 object-contain" />
-            </div>
-            <div className="bg-white/10 p-10 rounded-[40px] border border-white/20">
-               <div className="h-40 flex items-center px-10 text-6xl font-bold text-[#96bf48]">SHOPIFY</div>
-            </div>
-          </div>
-        </AbsoluteFill>
+      {/* 383–617: Companies mentioned — logos appear exactly when named */}
+      {/* Stack Overflow at 21.76s (frame 0), Shopify at 23.07s (+39), Basecamp at 24.12s (+70) */}
+      <Sequence from={383} durationInFrames={234}>
+        <MonolithExamples />
       </Sequence>
 
-      {/* 4. The Cons / WarZone */}
-      <Sequence from={900}>
-        <AbsoluteFill className="bg-red-900/20 flex flex-col items-center justify-center p-20 z-20">
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#000_100%)] opacity-50" />
-          <h2 className="text-[12rem] font-black text-red-600 uppercase mb-4 animate-pulse drop-shadow-2xl">BUG ❌</h2>
-          <h3 className="text-6xl font-black text-center text-white mb-10 leading-tight">ONE BUG IN <br/> <span className="text-red-500">PAYMENTS?</span></h3>
-          <div className="p-10 border-4 border-red-600 bg-red-600 text-white rounded-3xl">
-             <p className="text-7xl font-black uppercase italic">App Crashed!</p>
-          </div>
-          <p className="mt-20 text-5xl font-mono uppercase text-red-400 font-bold bg-black p-4">Codebase = War Zone ⚔️</p>
-        </AbsoluteFill>
+      {/* 617+: Bug / war zone (audio 29.5s+) */}
+      <Sequence from={617}>
+        <BugZone />
       </Sequence>
-
     </AbsoluteFill>
   );
 };
