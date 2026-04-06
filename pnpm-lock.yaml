@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@remotion/captions':
+        specifier: ^4.0.445
+        version: 4.0.445
       '@remotion/cli':
         specifier: 4.0.445
         version: 4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@remotion/install-whisper-cpp':
+        specifier: ^4.0.445
+        version: 4.0.445
       '@remotion/tailwind-v4':
         specifier: 4.0.445
         version: 4.0.445(@remotion/bundler@4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(webpack@5.105.0)
@@ -355,6 +361,9 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
+  '@remotion/captions@4.0.445':
+    resolution: {integrity: sha512-bRiHprPAmkULPl+mwrsvz1CzExEypIjL41DonJA3E1lXsxPb0LeHBxifBxzNkzEXmXICZfMPW5UhQITX8HxmXw==}
+
   '@remotion/cli@4.0.445':
     resolution: {integrity: sha512-lfAcT6tLSFmvdR1I4Re40Ym6JGMh/1muApJsn9blOkqJevAZr4lqK/Fjqf4pbcm2B4QslX6Uu5jWGoVJgli+fg==}
     hasBin: true
@@ -401,6 +410,9 @@ packages:
     resolution: {integrity: sha512-CCwXlfl/ADU54SDAGDgBNs1OU7uu+HhdXa03rYrAt2HJnTXIacQ0TGWQlLC9z+Y2Fff1JPsMXopz4oUVXG7tmQ==}
     peerDependencies:
       eslint: '>=9'
+
+  '@remotion/install-whisper-cpp@4.0.445':
+    resolution: {integrity: sha512-UZKSNKNop2ijyAMoQhGPuQElYDYlUxlY/hENhJnqrhF5wF6IiTNyEavFKChcGp8YkzERaZq4JOQWkYeUWGhtvg==}
 
   '@remotion/licensing@4.0.445':
     resolution: {integrity: sha512-IbRTYGNzw0CCqJpxpdMVYPDKU15gJKK3DEjxE9nU4UXJHCEaGglxU6KvnDK3ykjHawuMmND+gSSHpj++89l+Sg==}
@@ -1913,6 +1925,8 @@ snapshots:
       - webpack-cli
       - webpack-hot-middleware
 
+  '@remotion/captions@4.0.445': {}
+
   '@remotion/cli@4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@remotion/bundler': 4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1966,6 +1980,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@remotion/install-whisper-cpp@4.0.445':
+    dependencies:
+      '@remotion/captions': 4.0.445
 
   '@remotion/licensing@4.0.445': {}
 
