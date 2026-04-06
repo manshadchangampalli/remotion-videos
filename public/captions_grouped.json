@@ -1,0 +1,222 @@
+[
+  {
+    "text": "What actually happens the exact millisec",
+    "startMs": 170,
+    "endMs": 2410
+  },
+  {
+    "text": "ond you click a URL short ener ?",
+    "startMs": 2410,
+    "endMs": 4360
+  },
+  {
+    "text": "Let 's trace the path of a single click .",
+    "startMs": 4360,
+    "endMs": 6320
+  },
+  {
+    "text": "Step one , the request .",
+    "startMs": 6320,
+    "endMs": 8000
+  },
+  {
+    "text": "Your browser makes a request , but it doesn",
+    "startMs": 8000,
+    "endMs": 10200
+  },
+  {
+    "text": "'t go straight to a server .",
+    "startMs": 10200,
+    "endMs": 11600
+  },
+  {
+    "text": "It hits a load bal ancer .",
+    "startMs": 11600,
+    "endMs": 13320
+  },
+  {
+    "text": "Why a load bal ancer ?",
+    "startMs": 13320,
+    "endMs": 14480
+  },
+  {
+    "text": "Because if a link goes viral , millions of",
+    "startMs": 14480,
+    "endMs": 16570
+  },
+  {
+    "text": "clicks happen at once and a single server",
+    "startMs": 16570,
+    "endMs": 18680
+  },
+  {
+    "text": "would melt .",
+    "startMs": 18680,
+    "endMs": 19480
+  },
+  {
+    "text": "The load bal ancer acts as a traffic cop",
+    "startMs": 19480,
+    "endMs": 21720
+  },
+  {
+    "text": ", rooting your click to the least busy server",
+    "startMs": 21720,
+    "endMs": 23980
+  },
+  {
+    "text": ".",
+    "startMs": 23980,
+    "endMs": 24080
+  },
+  {
+    "text": "Step two , the cache .",
+    "startMs": 24080,
+    "endMs": 25720
+  },
+  {
+    "text": "The server receives the request and needs",
+    "startMs": 25720,
+    "endMs": 28050
+  },
+  {
+    "text": "to find the original long URL .",
+    "startMs": 28050,
+    "endMs": 29720
+  },
+  {
+    "text": "But it does not go to the database first",
+    "startMs": 29730,
+    "endMs": 31720
+  },
+  {
+    "text": ".",
+    "startMs": 31720,
+    "endMs": 31960
+  },
+  {
+    "text": "It checks an in - memory cache like Red is",
+    "startMs": 31960,
+    "endMs": 34130
+  },
+  {
+    "text": ".",
+    "startMs": 34130,
+    "endMs": 34400
+  },
+  {
+    "text": "If the link is viral , it is already in the",
+    "startMs": 34400,
+    "endMs": 36520
+  },
+  {
+    "text": "cache making the redirect lightning fast",
+    "startMs": 36520,
+    "endMs": 39300
+  },
+  {
+    "text": ".",
+    "startMs": 39300,
+    "endMs": 39440
+  },
+  {
+    "text": "Step three , the database .",
+    "startMs": 39440,
+    "endMs": 41160
+  },
+  {
+    "text": "If the link is not in the cache , the server",
+    "startMs": 41160,
+    "endMs": 43690
+  },
+  {
+    "text": "queries a no SQL database .",
+    "startMs": 43690,
+    "endMs": 45520
+  },
+  {
+    "text": "A short ener is just a massive key value",
+    "startMs": 45520,
+    "endMs": 47760
+  },
+  {
+    "text": "dictionary .",
+    "startMs": 47760,
+    "endMs": 48680
+  },
+  {
+    "text": "The server finds the long link , saves it",
+    "startMs": 48680,
+    "endMs": 50700
+  },
+  {
+    "text": "back into Red is for the next person , and",
+    "startMs": 50700,
+    "endMs": 52560
+  },
+  {
+    "text": "moves to the final step .",
+    "startMs": 52560,
+    "endMs": 54200
+  },
+  {
+    "text": "Step four , the redirect .",
+    "startMs": 54200,
+    "endMs": 56000
+  },
+  {
+    "text": "The server sends back an HTTP status code",
+    "startMs": 56000,
+    "endMs": 58920
+  },
+  {
+    "text": ".",
+    "startMs": 58920,
+    "endMs": 59160
+  },
+  {
+    "text": "You must use a 302 temporary redirect , not",
+    "startMs": 59230,
+    "endMs": 62400
+  },
+  {
+    "text": "a 301 .",
+    "startMs": 62400,
+    "endMs": 63480
+  },
+  {
+    "text": "A 301 saves the link on the user 's computer",
+    "startMs": 63480,
+    "endMs": 65940
+  },
+  {
+    "text": ", so you lose tracking .",
+    "startMs": 65940,
+    "endMs": 67280
+  },
+  {
+    "text": "A 302 forces them to hit your server every",
+    "startMs": 67280,
+    "endMs": 70270
+  },
+  {
+    "text": "time , which is exactly how you track analytics",
+    "startMs": 70270,
+    "endMs": 72750
+  },
+  {
+    "text": "and make money .",
+    "startMs": 72750,
+    "endMs": 73760
+  },
+  {
+    "text": "The browser reads the 302 and instantly redirect",
+    "startMs": 73760,
+    "endMs": 76470
+  },
+  {
+    "text": "s the user .",
+    "startMs": 76470,
+    "endMs": 77160
+  }
+]
