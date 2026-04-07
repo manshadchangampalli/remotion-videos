@@ -1,6 +1,6 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import { MyComposition } from "./short-url/Composition";
 
 // Loading the Outfit font for a premium look
 import "@remotion/google-fonts/Outfit";

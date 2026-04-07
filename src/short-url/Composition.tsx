@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, staticFile, Sequence } from "remotion";
 import { Captions } from "./Captions";
-import captionsListData from "../public/short-url/captions.json";
+import captionsListData from "../../public/short-url/captions.json";
 import type { Caption } from "@remotion/captions";
 
 import { HookScene } from "./scenes/HookScene";
@@ -19,23 +19,27 @@ import { OutroScene } from "./scenes/OutroScene";
 //   Step 4: 54200ms– 73760ms → frames 1626– 2213
 //   Outro:  73760ms– 77160ms → frames 2213– 2315
 
+// Global sync offset (positive delays visuals, negative advances them)
+// User says scenes are coming before audio, so we delay visuals by ~200ms (6 frames)
+const SYNC_OFFSET_FRAMES = 6; 
+
+const fps = 30;
+const getFrame = (ms: number) => Math.floor((ms / 1000) * fps) + SYNC_OFFSET_FRAMES;
+
 const HOOK_START = 0;
-const HOOK_DUR = 190;
+const STEP1_START = getFrame(6320); 
+const STEP2_START = getFrame(24080);
+const STEP3_START = getFrame(39440);
+const STEP4_START = getFrame(54200);
+const OUTRO_START = getFrame(73760);
 
-const STEP1_START = 190;
-const STEP1_DUR = 532;
+const HOOK_DUR = STEP1_START - HOOK_START;
+const STEP1_DUR = STEP2_START - STEP1_START;
+const STEP2_DUR = STEP3_START - STEP2_START;
+const STEP3_DUR = STEP4_START - STEP3_START;
+const STEP4_DUR = OUTRO_START - STEP4_START;
+const OUTRO_DUR = 2318 - OUTRO_START;
 
-const STEP2_START = 722;
-const STEP2_DUR = 461;
-
-const STEP3_START = 1183;
-const STEP3_DUR = 443;
-
-const STEP4_START = 1626;
-const STEP4_DUR = 587;
-
-const OUTRO_START = 2213;
-const OUTRO_DUR = 105;
 
 export const MyComposition: React.FC = () => {
   return (
