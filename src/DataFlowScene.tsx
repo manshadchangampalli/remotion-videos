@@ -31,7 +31,7 @@ const IconWrapper: React.FC<{
         }}
       >
         <Img 
-            src={staticFile(src)} 
+            src={staticFile(`short-url/${src}`)} 
             className="w-40 h-40 object-contain drop-shadow-xl"
         />
       </div>
