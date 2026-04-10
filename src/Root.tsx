@@ -2,6 +2,7 @@ import "./index.css";
 import { Composition } from "remotion";
 import { MyComposition } from "./short-url/Composition";
 import { PostmanComposition } from "./postman/Composition";
+import { InstagramLikeComposition } from "./instagram-like/Composition";
 
 // Loading the Outfit font for a premium look
 import "@remotion/google-fonts/Outfit";
@@ -21,6 +22,14 @@ export const RemotionRoot: React.FC = () => {
         id="PostmanVsBrowser"
         component={PostmanComposition}
         durationInFrames={2112} // 70.4s at 30fps
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="InstagramLike"
+        component={InstagramLikeComposition}
+        durationInFrames={3840} // 128s at 30fps
         fps={30}
         width={1080}
         height={1920}
