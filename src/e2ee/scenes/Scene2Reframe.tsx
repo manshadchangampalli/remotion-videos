@@ -29,13 +29,8 @@ export const Scene2Reframe: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Phones spring to small scale
-  const scaleSpring = spring({
-    frame: frame - 4,
-    fps,
-    config: { damping: 14, stiffness: 120 },
-  });
-  const phoneScale = interpolate(scaleSpring, [0, 1], [1, SMALL]);
+  // Phones are already at small scale — no entrance animation
+  const phoneScale = SMALL;
 
   // Padlock body draws (strokeDashoffset)
   const lockBodyLen = 520;
@@ -290,8 +285,10 @@ export const Scene2Reframe: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          left: 10,
-          top: 830,
+          left: 60,
+          top: 780,
+          width: PHONE_W,
+          height: PHONE_H,
           transform: `scale(${phoneScale})`,
           transformOrigin: "top left",
         }}
@@ -308,8 +305,10 @@ export const Scene2Reframe: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          right: 10,
-          top: 830,
+          right: 60,
+          top: 780,
+          width: PHONE_W,
+          height: PHONE_H,
           transform: `scale(${phoneScale})`,
           transformOrigin: "top right",
         }}

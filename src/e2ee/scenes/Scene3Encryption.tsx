@@ -36,8 +36,8 @@ export const Scene3Encryption: React.FC = () => {
     config: { damping: 12, stiffness: 130 },
   });
   // Bubble travels from sender phone center-right → center screen
-  const SENDER_CENTER_X = 28 + PHONE_W * SMALL + 20;
-  const SENDER_CENTER_Y = 830 + (PHONE_H * SMALL) / 2;
+  const SENDER_CENTER_X = 60 + PHONE_W * SMALL + 20;
+  const SENDER_CENTER_Y = 780 + (PHONE_H * SMALL) / 2;
   const bubbleX = interpolate(bubbleLaunchP, [0, 1], [SENDER_CENTER_X, 480]);
   const bubbleY = interpolate(bubbleLaunchP, [0, 1], [SENDER_CENTER_Y, 940]);
   const bubbleArcY = -Math.sin(bubbleLaunchP * Math.PI) * 180;
@@ -335,8 +335,10 @@ export const Scene3Encryption: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          left: 10,
-          top: 820,
+          left: 60,
+          top: 780,
+          width: PHONE_W,
+          height: PHONE_H,
           transform: `scale(${SMALL})`,
           transformOrigin: "top left",
         }}
@@ -355,8 +357,10 @@ export const Scene3Encryption: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          right: 10,
-          top: 820,
+          right: 60,
+          top: 780,
+          width: PHONE_W,
+          height: PHONE_H,
           transform: `scale(${SMALL})`,
           transformOrigin: "top right",
         }}

@@ -5,6 +5,7 @@ import { PostmanComposition } from "./postman/Composition";
 import { InstagramLikeComposition } from "./instagram-like/Composition";
 import { LLMComposition, TOTAL_FRAMES as LLM_FRAMES } from "./llm/Composition";
 import { E2EEComposition } from "./e2ee/Composition";
+import { ShazamComposition } from "./shazam/Composition";
 
 // Loading the Outfit font for a premium look
 import "@remotion/google-fonts/Outfit";
@@ -48,6 +49,14 @@ export const RemotionRoot: React.FC = () => {
         id="E2EEWhatsApp"
         component={E2EEComposition}
         durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="ShazamConstellation"
+        component={ShazamComposition}
+        durationInFrames={1710}
         fps={30}
         width={1080}
         height={1920}
