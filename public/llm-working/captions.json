@@ -1,0 +1,10 @@
+[
+  { "text": "HAVE", "startMs": 0, "endMs": 1000 },
+  { "text": "YOU", "startMs": 1000, "endMs": 1500 },
+  { "text": "EVER", "startMs": 1500, "endMs": 2000 },
+  { "text": "WONDERED", "startMs": 2000, "endMs": 3000 },
+  { "text": "HOW", "startMs": 3000, "endMs": 3500 },
+  { "text": "LLMS", "startMs": 3500, "endMs": 4000 },
+  { "text": "ACTUALLY", "startMs": 4000, "endMs": 4500 },
+  { "text": "WORK?", "startMs": 4500, "endMs": 5500 }
+]

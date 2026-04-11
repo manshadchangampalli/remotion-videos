@@ -121,15 +121,19 @@ export const DatabaseScene: React.FC = () => {
         </defs>
 
         {/* Title */}
-        <rect x={0} y={40} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
-        <text x={540} y={91} textAnchor="middle"
-          fill="url(#dbGrad)" fontSize={36}
-          fontWeight="900" fontFamily="monospace" letterSpacing={2}
+        <rect x={0} y={30} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
+        <text x={540} y={85} textAnchor="middle"
+          fill="url(#dbGrad)" fontSize={52}
+          fontWeight="900" fontFamily="monospace" letterSpacing={3}
           filter="url(#dbGlow)"
         >
           THE DATABASE
         </text>
-        <line x1={0} y1={118} x2={1080} y2={118} stroke="url(#dbGrad)" strokeWidth={1.5} strokeOpacity={0.4} />
+        <text x={540} y={130} textAnchor="middle"
+          fill="rgba(64,93,230,0.7)" fontSize={24} fontFamily="monospace">
+          (The source of truth — persistent & secured)
+        </text>
+        <line x1={0} y1={150} x2={1080} y2={150} stroke="url(#dbGrad)" strokeWidth={2} strokeOpacity={0.6} />
 
         {/* ─── EVENT STREAM (left) ─── */}
         <g transform={`translate(${STREAM_X}, ${STREAM_Y}) scale(${streamScale})`} opacity={streamScale}>
@@ -190,21 +194,21 @@ export const DatabaseScene: React.FC = () => {
         })}
 
         {/* ─── CLERK / WORKER ─── */}
-        <g transform={`translate(${CLERK_X}, ${CLERK_Y}) scale(${clerkScale})`} opacity={clerkScale}>
-          <circle cx={0} cy={0} r={60}
-            fill="rgba(64,93,230,0.10)"
-            stroke="#405DE6" strokeWidth={2.5}
+        <g transform={`translate(${CLERK_X}, ${CLERK_Y}) scale(${clerkScale * 1.3})`} opacity={clerkScale}>
+          <circle cx={0} cy={0} r={65}
+            fill="rgba(64,93,230,0.15)"
+            stroke="#405DE6" strokeWidth={3}
             filter="url(#dbGlow)"
           />
-          <text x={0} y={18} textAnchor="middle" fontSize={52}>📋</text>
-          <text x={0} y={84} textAnchor="middle"
-            fill="#405DE6" fontSize={18}
+          <text x={0} y={22} textAnchor="middle" fontSize={64}>📋</text>
+          <text x={0} y={95} textAnchor="middle"
+            fill="#405DE6" fontSize={22}
             fontWeight="800" fontFamily="monospace"
           >
             STEADY CLERK
           </text>
-          <text x={0} y={108} textAnchor="middle"
-            fill="rgba(64,93,230,0.6)" fontSize={15}
+          <text x={0} y={122} textAnchor="middle"
+            fill="rgba(64,93,230,0.6)" fontSize={18}
             fontFamily="monospace"
           >
             batch processor
@@ -283,42 +287,45 @@ export const DatabaseScene: React.FC = () => {
         )}
 
         {/* ─── DATABASE VAULT (right) ─── */}
-        <g transform={`translate(${DB_X + dbShake}, ${DB_Y}) scale(${dbScale})`} opacity={dbScale}>
+        <g transform={`translate(${DB_X + dbShake}, ${DB_Y}) scale(${dbScale * 1.25})`} opacity={dbScale}>
           {/* Vault outer ring glow */}
-          <rect x={-120} y={-180} width={240} height={360} rx={22}
+          <rect x={-140} y={-200} width={280} height={400} rx={22}
             fill="none" stroke="#405DE6" strokeWidth={1.5} opacity={0.2}
             filter="url(#dbStrongGlow)"
           />
           {/* Vault main body */}
-          <rect x={-100} y={-160} width={200} height={320} rx={18}
+          <rect x={-120} y={-180} width={240} height={360} rx={18}
             fill="url(#dbVaultGrad)"
             stroke="#405DE6" strokeWidth={3.5}
             filter="url(#dbGlow)"
           />
           {/* Vault door handle */}
-          <circle cx={0} cy={0} r={55}
+          <circle cx={0} cy={0} r={65}
             fill="rgba(0,245,255,0.05)"
             stroke="#00f5ff" strokeWidth={2.5}
           />
-          <circle cx={0} cy={0} r={35}
+          <circle cx={0} cy={0} r={45}
             fill="rgba(0,245,255,0.08)"
             stroke="#00f5ff" strokeWidth={1.5}
           />
           {/* Spokes */}
-          {[0, 60, 120, 180, 240, 300].map(angle => (
-            <line key={angle}
-              x1={0} y1={0}
-              x2={Math.cos((angle * Math.PI) / 180) * 50}
-              y2={Math.sin((angle * Math.PI) / 180) * 50}
-              stroke="#00f5ff" strokeWidth={2} opacity={0.6}
-            />
-          ))}
+          {[0, 60, 120, 180, 240, 300].map(angle => {
+            const rot = interpolate(frame, [260, 450], [0, 360]);
+            return (
+              <line key={angle}
+                x1={0} y1={0}
+                x2={Math.cos(((angle + rot) * Math.PI) / 180) * 60}
+                y2={Math.sin(((angle + rot) * Math.PI) / 180) * 60}
+                stroke="#00f5ff" strokeWidth={2.5} opacity={0.7}
+              />
+            );
+          })}
           {/* Lock icon */}
-          <text x={0} y={12} textAnchor="middle" fontSize={30}>🔒</text>
+          <text x={0} y={15} textAnchor="middle" fontSize={36}>🔒</text>
 
           {/* DB header */}
-          <text x={0} y={-120} textAnchor="middle"
-            fill="#00f5ff" fontSize={18}
+          <text x={0} y={-140} textAnchor="middle"
+            fill="#00f5ff" fontSize={22}
             fontWeight="900" fontFamily="monospace"
           >
             PERMANENT VAULT
@@ -326,8 +333,8 @@ export const DatabaseScene: React.FC = () => {
 
           {/* Saved count */}
           {dbThud > 0.3 && (
-            <text x={0} y={90} textAnchor="middle"
-              fill="white" fontSize={32}
+            <text x={0} y={105} textAnchor="middle"
+              fill="white" fontSize={38}
               fontWeight="900" fontFamily="monospace"
               filter="url(#dbGlow)"
               opacity={Math.min(1, (dbThud - 0.3) * 1.5)}
@@ -336,8 +343,8 @@ export const DatabaseScene: React.FC = () => {
             </text>
           )}
           {dbThud > 0.5 && (
-            <text x={0} y={118} textAnchor="middle"
-              fill="rgba(0,245,255,0.7)" fontSize={16}
+            <text x={0} y={135} textAnchor="middle"
+              fill="rgba(0,245,255,0.7)" fontSize={20}
               fontFamily="monospace"
               opacity={Math.min(1, (dbThud - 0.5) * 2)}
             >

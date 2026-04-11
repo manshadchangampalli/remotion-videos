@@ -9,9 +9,9 @@ import {
 
 // Node positions for the architecture diagram
 const LB_NODE    = { x: 540, y: 440 };
-const STREAM_NODE = { x: 540, y: 740 };
-const CACHE_NODE  = { x: 220, y: 1020 };
-const DB_NODE     = { x: 860, y: 1020 };
+const STREAM_NODE = { x: 540, y: 760 };
+const CACHE_NODE  = { x: 200, y: 1040 };
+const DB_NODE     = { x: 880, y: 1040 };
 
 export const BigPictureScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -24,8 +24,25 @@ export const BigPictureScene: React.FC = () => {
 
   // Duration: ~748 frames (24.9s)
 
+  // Camera pull-back: starts zoomed in at the database, pulls back to full architecture
+  const camScale = interpolate(frame, [0, 60], [1.4, 0.85], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: (t) => 1 - Math.pow(1 - t, 3),
+  });
+  const camX = interpolate(frame, [0, 60], [-340, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: (t) => 1 - Math.pow(1 - t, 3),
+  });
+  const camY = interpolate(frame, [0, 60], [-450, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: (t) => 1 - Math.pow(1 - t, 3),
+  });
+
   // Title
-  const titleOpacity = interpolate(frame, [5, 25], [0, 1], {
+  const titleOpacity = interpolate(frame, [30, 60], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -99,7 +116,13 @@ export const BigPictureScene: React.FC = () => {
         }}
       />
 
-      <svg width="1080" height="1920" style={{ position: "absolute", inset: 0 }}>
+      <svg width="1080" height="1920"
+        style={{
+          position: "absolute",
+          inset: 0,
+          transform: `scale(${camScale}) translate(${camX}px, ${camY}px)`,
+          transformOrigin: "center center",
+        }}>
         <defs>
           <filter id="bpGlow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="9" result="blur" />
@@ -131,15 +154,15 @@ export const BigPictureScene: React.FC = () => {
 
         {/* Title */}
         <g opacity={titleOpacity}>
-          <rect x={0} y={40} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
-          <text x={540} y={91} textAnchor="middle"
-            fill="url(#bpGrad)" fontSize={34}
-            fontWeight="900" fontFamily="monospace" letterSpacing={2}
+          <rect x={0} y={30} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
+          <text x={540} y={85} textAnchor="middle"
+            fill="url(#bpGrad)" fontSize={52}
+            fontWeight="900" fontFamily="monospace" letterSpacing={3}
             filter="url(#bpGlow)"
           >
-            THE FULL PICTURE
+            THE FULL ARCHITECTURE
           </text>
-          <line x1={0} y1={118} x2={1080} y2={118} stroke="url(#bpGrad)" strokeWidth={1.5} strokeOpacity={0.5} />
+          <line x1={0} y1={150} x2={1080} y2={150} stroke="url(#bpGrad)" strokeWidth={2} strokeOpacity={0.6} />
         </g>
 
         {/* Incoming users label */}
@@ -234,18 +257,18 @@ export const BigPictureScene: React.FC = () => {
         )}
 
         {/* ─── LOAD BALANCER NODE ─── */}
-        <g transform={`translate(${LB_NODE.x}, ${LB_NODE.y}) scale(${lbScale})`} opacity={lbScale}>
-          <circle cx={0} cy={0} r={72}
-            fill="rgba(64,93,230,0.12)"
-            stroke="#405DE6" strokeWidth={3.5}
+        <g transform={`translate(${LB_NODE.x}, ${LB_NODE.y}) scale(${lbScale * 1.3})`} opacity={lbScale}>
+          <circle cx={0} cy={0} r={85}
+            fill="rgba(64,93,230,0.15)"
+            stroke="#405DE6" strokeWidth={4}
             filter="url(#bpGlow)"
           />
-          <circle cx={0} cy={0} r={50} fill="rgba(64,93,230,0.22)" />
-          <text x={0} y={18} textAnchor="middle" fontSize={45}>🚦</text>
+          <circle cx={0} cy={0} r={60} fill="rgba(64,93,230,0.25)" />
+          <text x={0} y={22} textAnchor="middle" fontSize={58}>🚦</text>
         </g>
         <g opacity={labelsOpacity}>
-          <text x={LB_NODE.x} y={LB_NODE.y + 102} textAnchor="middle"
-            fill="#405DE6" fontSize={22}
+          <text x={LB_NODE.x} y={LB_NODE.y + 130} textAnchor="middle"
+            fill="#405DE6" fontSize={32}
             fontWeight="900" fontFamily="monospace"
             filter="url(#bpGlow)"
           >
@@ -260,10 +283,10 @@ export const BigPictureScene: React.FC = () => {
         </g>
 
         {/* ─── EVENT STREAM NODE ─── */}
-        <g transform={`translate(${STREAM_NODE.x}, ${STREAM_NODE.y}) scale(${streamScale})`} opacity={streamScale}>
-          <rect x={-68} y={-52} width={136} height={104} rx={14}
-            fill="rgba(193,53,132,0.10)"
-            stroke="#C13584" strokeWidth={3}
+        <g transform={`translate(${STREAM_NODE.x}, ${STREAM_NODE.y}) scale(${streamScale * 1.4})`} opacity={streamScale}>
+          <rect x={-75} y={-60} width={150} height={120} rx={16}
+            fill="rgba(193,53,132,0.15)"
+            stroke="#C13584" strokeWidth={3.5}
             filter="url(#bpGlow)"
           />
           {Array.from({ length: 4 }, (_, i) => (
@@ -275,12 +298,12 @@ export const BigPictureScene: React.FC = () => {
           ))}
         </g>
         <g opacity={labelsOpacity}>
-          <text x={STREAM_NODE.x} y={STREAM_NODE.y - 68} textAnchor="middle"
-            fill="#C13584" fontSize={20}
+          <text x={STREAM_NODE.x} y={STREAM_NODE.y - 110} textAnchor="middle"
+            fill="#C13584" fontSize={32}
             fontWeight="900" fontFamily="monospace"
             filter="url(#bpGlow)"
           >
-            EVENT STREAM
+            MESSAGE QUEUE
           </text>
           <text x={STREAM_NODE.x} y={STREAM_NODE.y - 46} textAnchor="middle"
             fill="rgba(193,53,132,0.6)" fontSize={15}
@@ -291,10 +314,10 @@ export const BigPictureScene: React.FC = () => {
         </g>
 
         {/* ─── CACHE NODE ─── */}
-        <g transform={`translate(${CACHE_NODE.x}, ${CACHE_NODE.y}) scale(${cacheScale})`} opacity={cacheScale}>
-          <rect x={-72} y={-60} width={144} height={120} rx={14}
-            fill="rgba(252,175,69,0.10)"
-            stroke="#FCAF45" strokeWidth={3}
+        <g transform={`translate(${CACHE_NODE.x}, ${CACHE_NODE.y}) scale(${cacheScale * 1.4})`} opacity={cacheScale}>
+          <rect x={-85} y={-70} width={170} height={140} rx={18}
+            fill="rgba(252,175,69,0.15)"
+            stroke="#FCAF45" strokeWidth={3.5}
             filter="url(#bpGlow)"
           />
           <text x={0} y={16} textAnchor="middle" fontSize={44}>⚡</text>
@@ -306,12 +329,12 @@ export const BigPictureScene: React.FC = () => {
           </text>
         </g>
         <g opacity={labelsOpacity}>
-          <text x={CACHE_NODE.x} y={CACHE_NODE.y + 84} textAnchor="middle"
-            fill="#FCAF45" fontSize={20}
+          <text x={CACHE_NODE.x} y={CACHE_NODE.y + 130} textAnchor="middle"
+            fill="#FCAF45" fontSize={30}
             fontWeight="900" fontFamily="monospace"
             filter="url(#bpGlow)"
           >
-            CACHE
+            REDIS CACHE
           </text>
           <text x={CACHE_NODE.x} y={CACHE_NODE.y + 106} textAnchor="middle"
             fill="rgba(252,175,69,0.6)" fontSize={15}
@@ -322,10 +345,10 @@ export const BigPictureScene: React.FC = () => {
         </g>
 
         {/* ─── DATABASE NODE ─── */}
-        <g transform={`translate(${DB_NODE.x}, ${DB_NODE.y}) scale(${dbScale})`} opacity={dbScale}>
-          <rect x={-72} y={-80} width={144} height={160} rx={16}
-            fill="rgba(64,93,230,0.10)"
-            stroke="#405DE6" strokeWidth={3}
+        <g transform={`translate(${DB_NODE.x}, ${DB_NODE.y}) scale(${dbScale * 1.4})`} opacity={dbScale}>
+          <rect x={-85} y={-95} width={170} height={190} rx={22}
+            fill="rgba(64,93,230,0.15)"
+            stroke="#405DE6" strokeWidth={3.5}
             filter="url(#bpGlow)"
           />
           <circle cx={0} cy={-10} r={40}
@@ -348,8 +371,8 @@ export const BigPictureScene: React.FC = () => {
           </text>
         </g>
         <g opacity={labelsOpacity}>
-          <text x={DB_NODE.x} y={DB_NODE.y + 104} textAnchor="middle"
-            fill="#405DE6" fontSize={20}
+          <text x={DB_NODE.x} y={DB_NODE.y + 130} textAnchor="middle"
+            fill="#405DE6" fontSize={30}
             fontWeight="900" fontFamily="monospace"
             filter="url(#bpGlow)"
           >

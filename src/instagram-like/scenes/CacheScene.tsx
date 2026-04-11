@@ -109,18 +109,22 @@ export const CacheScene: React.FC = () => {
         </defs>
 
         {/* Title */}
-        <rect x={0} y={40} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
-        <text x={540} y={91} textAnchor="middle"
-          fill="url(#cacheGrad)" fontSize={36}
-          fontWeight="900" fontFamily="monospace" letterSpacing={2}
+        <rect x={0} y={30} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
+        <text x={540} y={85} textAnchor="middle"
+          fill="url(#cacheGrad)" fontSize={52}
+          fontWeight="900" fontFamily="monospace" letterSpacing={3}
           filter="url(#cacheGlow)"
         >
-          THE CACHE
+          REDIS CACHE
         </text>
-        <line x1={0} y1={118} x2={1080} y2={118} stroke="url(#cacheGrad)" strokeWidth={1.5} strokeOpacity={0.4} />
+        <text x={540} y={130} textAnchor="middle"
+          fill="rgba(252,175,69,0.7)" fontSize={24} fontFamily="monospace">
+          (Sub-millisecond reads — permanent leaderboard)
+        </text>
+        <line x1={0} y1={150} x2={1080} y2={150} stroke="url(#cacheGrad)" strokeWidth={2} strokeOpacity={0.6} />
 
         {/* ─── EVENT STREAM NODE (left) ─── */}
-        <g transform={`translate(${STREAM_X}, ${STREAM_Y}) scale(${streamScale})`} opacity={streamScale}>
+        <g transform={`translate(${STREAM_X}, ${STREAM_Y}) scale(${streamScale * 1.1})`} opacity={streamScale}>
           <rect x={-85} y={-110} width={170} height={220} rx={12}
             fill="rgba(193,53,132,0.10)"
             stroke="#C13584" strokeWidth={2.5}
@@ -134,12 +138,12 @@ export const CacheScene: React.FC = () => {
               fill="rgba(193,53,132,0.25)"
             />
           ))}
-          <text x={0} y={128} textAnchor="middle"
-            fill="#C13584" fontSize={20}
+          <text x={0} y={135} textAnchor="middle"
+            fill="#C13584" fontSize={26}
             fontWeight="900" fontFamily="monospace"
             filter="url(#cacheGlow)"
           >
-            EVENT STREAM
+            THE QUEUE
           </text>
           <text x={0} y={152} textAnchor="middle"
             fill="rgba(193,53,132,0.6)" fontSize={16}
@@ -150,15 +154,15 @@ export const CacheScene: React.FC = () => {
         </g>
 
         {/* ─── FAST WORKER ─── */}
-        <g transform={`translate(${WORKER_X}, ${WORKER_Y}) scale(${workerScale})`} opacity={workerScale}>
-          <circle cx={0} cy={0} r={55}
-            fill="rgba(252,175,69,0.12)"
-            stroke="#FCAF45" strokeWidth={2.5}
+        <g transform={`translate(${WORKER_X}, ${WORKER_Y}) scale(${workerScale * 1.3})`} opacity={workerScale}>
+          <circle cx={0} cy={0} r={60}
+            fill="rgba(252,175,69,0.15)"
+            stroke="#FCAF45" strokeWidth={3}
             filter="url(#cacheGlow)"
           />
-          <text x={0} y={18} textAnchor="middle" fontSize={48}>⚡</text>
-          <text x={0} y={80} textAnchor="middle"
-            fill="#FCAF45" fontSize={18}
+          <text x={0} y={22} textAnchor="middle" fontSize={64}>⚡</text>
+          <text x={0} y={90} textAnchor="middle"
+            fill="#FCAF45" fontSize={22}
             fontWeight="800" fontFamily="monospace"
           >
             FAST WORKER
@@ -273,10 +277,10 @@ export const CacheScene: React.FC = () => {
           />
           <rect x={-110} y={-108} width={220} height={18} fill="rgba(252,175,69,0.2)" />
           <text x={0} y={-108} textAnchor="middle"
-            fill="#FCAF45" fontSize={18}
+            fill="#FCAF45" fontSize={22}
             fontWeight="900" fontFamily="monospace"
           >
-            CACHE
+            REDIS
           </text>
 
           {/* The big counter */}
@@ -376,10 +380,10 @@ export const CacheScene: React.FC = () => {
           <rect x={-360} y={-50} width={720} height={100} rx={50}
             fill="url(#cacheGrad)" filter="url(#cacheStrongGlow)"
           />
-          <text x={0} y={16} textAnchor="middle" fill="white" fontSize={36}
+          <text x={0} y={16} textAnchor="middle" fill="white" fontSize={44}
             fontWeight="900" fontFamily="monospace"
           >
-            🗃️ THE CACHE (INSTANT READ)
+            ⚡ REDIS (INSTANT READ)
           </text>
         </g>
       </svg>

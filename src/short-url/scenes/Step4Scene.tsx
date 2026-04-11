@@ -37,8 +37,8 @@ const LaptopIcon: React.FC<{ color: string; size: number }> = ({ color, size }) 
   );
 };
 
-const SERVER = { x: 800, y: 420 };
-const LAPTOP = { x: 280, y: 420 };
+const SERVER = { x: 800, y: 400 };
+const LAPTOP = { x: 280, y: 400 };
 const lineLen = Math.sqrt((SERVER.x - LAPTOP.x) ** 2 + (SERVER.y - LAPTOP.y) ** 2);
 
 // Card positions
@@ -56,34 +56,34 @@ export const Step4Scene: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // Nodes appear (frame 5-30)
-  const serverScale = spring({ frame: frame - 5, fps, config: { damping: 14, stiffness: 110 } });
-  const laptopScale = spring({ frame: frame - 12, fps, config: { damping: 14, stiffness: 110 } });
+  // Nodes appear (frame 2-25)
+  const serverScale = spring({ frame: frame - 2, fps, config: { damping: 10, stiffness: 180 } });
+  const laptopScale = spring({ frame: frame - 8, fps, config: { damping: 10, stiffness: 180 } });
 
-  // Purple line: Server → Laptop (frame 35-75)
-  const mainLineProgress = interpolate(frame, [35, 72], [0, 1], {
+  // Purple line: Server → Laptop (frame 20-45)
+  const mainLineProgress = interpolate(frame, [20, 45], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
   const lineDashOffset = lineLen * (1 - Math.max(0, Math.min(1, mainLineProgress)));
 
-  // "HTTP STATUS CODE" label (frame 55-80)
-  const statusLabelOpacity = interpolate(frame, [55, 75], [0, 1], {
+  // "HTTP STATUS CODE" label (frame 35-50)
+  const statusLabelOpacity = interpolate(frame, [35, 50], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
   // Comparison cards appear
-  // 301 card (frame 80-120)
-  const card301Scale = spring({ frame: frame - 80, fps, config: { damping: 12, stiffness: 110 } });
-  const card301Opacity = interpolate(frame, [80, 108], [0, 1], {
+  // 301 card (frame 50-80)
+  const card301Scale = spring({ frame: frame - 50, fps, config: { damping: 10, stiffness: 180 } });
+  const card301Opacity = interpolate(frame, [50, 70], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  // 302 card (frame 115-155)
-  const card302Scale = spring({ frame: frame - 115, fps, config: { damping: 12, stiffness: 110 } });
-  const card302Opacity = interpolate(frame, [115, 142], [0, 1], {
+  // 302 card (frame 80-110)
+  const card302Scale = spring({ frame: frame - 80, fps, config: { damping: 10, stiffness: 180 } });
+  const card302Opacity = interpolate(frame, [80, 100], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -136,7 +136,7 @@ export const Step4Scene: React.FC = () => {
           x="540" y="80"
           textAnchor="middle"
           fill="#a78bfa"
-          fontSize="36"
+          fontSize="52"
           fontWeight="900"
           fontFamily="monospace"
           filter="url(#glow)"
@@ -146,20 +146,20 @@ export const Step4Scene: React.FC = () => {
 
         {/* ===== NODES ===== */}
         {/* Server */}
-        <g transform={`translate(${SERVER.x}, ${SERVER.y}) scale(${serverScale})`}>
+        <g transform={`translate(${SERVER.x}, ${SERVER.y}) scale(${serverScale * 1.4})`}>
           <circle cx={0} cy={0} r={78} fill="#a78bfa08" stroke="#a78bfa" strokeWidth={2} filter="url(#glow)" />
           <ServerIcon color="#a78bfa" size={84} />
         </g>
-        <text x={SERVER.x} y={SERVER.y + 160} textAnchor="middle" fill="#a78bfa" fontSize="21" fontWeight="800" fontFamily="monospace" opacity={serverScale} filter="url(#glow)">
+        <text x={SERVER.x} y={SERVER.y + 180} textAnchor="middle" fill="#a78bfa" fontSize="32" fontWeight="800" fontFamily="monospace" opacity={serverScale} filter="url(#glow)">
           WEB SERVER
         </text>
-
+ 
         {/* Laptop */}
-        <g transform={`translate(${LAPTOP.x}, ${LAPTOP.y}) scale(${laptopScale})`}>
+        <g transform={`translate(${LAPTOP.x}, ${LAPTOP.y}) scale(${laptopScale * 1.4})`}>
           <circle cx={0} cy={0} r={78} fill="#00f5ff08" stroke="#00f5ff" strokeWidth={2} filter="url(#glow)" />
           <LaptopIcon color="#00f5ff" size={84} />
         </g>
-        <text x={LAPTOP.x} y={LAPTOP.y + 160} textAnchor="middle" fill="#00f5ff" fontSize="21" fontWeight="800" fontFamily="monospace" opacity={laptopScale} filter="url(#glow)">
+        <text x={LAPTOP.x} y={LAPTOP.y + 180} textAnchor="middle" fill="#00f5ff" fontSize={32} fontWeight="800" fontFamily="monospace" opacity={laptopScale} filter="url(#glow)">
           YOUR BROWSER
         </text>
 
@@ -203,8 +203,8 @@ export const Step4Scene: React.FC = () => {
         {/* HTTP Status label on the line */}
         {statusLabelOpacity > 0 && (
           <g opacity={statusLabelOpacity}>
-            <rect x={340} y={300} width={400} height={50} rx={10} fill="#a78bfa18" stroke="#a78bfa44" strokeWidth={1.5} />
-            <text x={540} y={331} textAnchor="middle" fill="#a78bfa" fontSize={21} fontFamily="monospace" fontWeight="700" filter="url(#softGlow)">
+            <rect x={320} y={280} width={440} height={60} rx={10} fill="#a78bfa18" stroke="#a78bfa44" strokeWidth={1.5} />
+            <text x={540} y={318} textAnchor="middle" fill="#a78bfa" fontSize={30} fontFamily="monospace" fontWeight="700" filter="url(#softGlow)">
               HTTP Status Code →
             </text>
           </g>
@@ -233,11 +233,11 @@ export const Step4Scene: React.FC = () => {
             <rect x={0} y={50} width={CARD_W} height={20} fill="#ef444418" />
 
             {/* 301 badge */}
-            <rect x={20} y={16} width={100} height={38} rx={10} fill="#ef4444" />
-            <text x={70} y={42} textAnchor="middle" fill="white" fontSize={22} fontWeight="900" fontFamily="monospace">
+            <rect x={20} y={16} width={120} height={44} rx={10} fill="#ef4444" />
+            <text x={80} y={48} textAnchor="middle" fill="white" fontSize={28} fontWeight="900" fontFamily="monospace">
               301
             </text>
-            <text x={200} y={42} textAnchor="middle" fill="#ef4444" fontSize={18} fontWeight="700" fontFamily="monospace">
+            <text x={220} y={48} textAnchor="middle" fill="#ef4444" fontSize={22} fontWeight="700" fontFamily="monospace">
               PERMANENT
             </text>
 
@@ -258,12 +258,12 @@ export const Step4Scene: React.FC = () => {
             </g>
 
             {/* Description text */}
-            <text x={170} y={380} textAnchor="middle" fill="#ef4444cc" fontSize={16} fontFamily="monospace">Browser caches redirect</text>
-            <text x={170} y={402} textAnchor="middle" fill="#ef4444aa" fontSize={16} fontFamily="monospace">locally. Never hits</text>
-            <text x={170} y={424} textAnchor="middle" fill="#ef4444aa" fontSize={16} fontFamily="monospace">your server again.</text>
+            <text x={170} y={380} textAnchor="middle" fill="#ef4444cc" fontSize={19} fontFamily="monospace">Browser caches redirect</text>
+            <text x={170} y={406} textAnchor="middle" fill="#ef4444aa" fontSize={19} fontFamily="monospace">locally. Never hits</text>
+            <text x={170} y={432} textAnchor="middle" fill="#ef4444aa" fontSize={19} fontFamily="monospace">your server again.</text>
 
             {/* ❌ */}
-            <text x={170} y={470} textAnchor="middle" fill="#ef4444" fontSize={26} filter="url(#glow)">❌ Lose tracking</text>
+            <text x={170} y={480} textAnchor="middle" fill="#ef4444" fontSize={32} filter="url(#glow)">❌ Lose tracking</text>
 
             {/* Crossed out analytics */}
             <rect x={20} y={445} width={CARD_W - 40} height={58} rx={10} fill="#ef444415" stroke="#ef444430" strokeWidth={1} />
@@ -290,11 +290,11 @@ export const Step4Scene: React.FC = () => {
             <rect x={0} y={50} width={CARD_W} height={20} fill="#22c55e18" />
 
             {/* 302 badge */}
-            <rect x={20} y={16} width={100} height={38} rx={10} fill="#22c55e" filter="url(#glow)" />
-            <text x={70} y={42} textAnchor="middle" fill="white" fontSize={22} fontWeight="900" fontFamily="monospace">
+            <rect x={20} y={16} width={120} height={44} rx={10} fill="#22c55e" filter="url(#glow)" />
+            <text x={80} y={48} textAnchor="middle" fill="white" fontSize={28} fontWeight="900" fontFamily="monospace">
               302
             </text>
-            <text x={200} y={42} textAnchor="middle" fill="#22c55e" fontSize={18} fontWeight="700" fontFamily="monospace">
+            <text x={220} y={48} textAnchor="middle" fill="#22c55e" fontSize={22} fontWeight="700" fontFamily="monospace">
               TEMPORARY
             </text>
 
@@ -338,11 +338,11 @@ export const Step4Scene: React.FC = () => {
             </text>
 
             {/* Description text */}
-            <text x={170} y={470} textAnchor="middle" fill="#22c55ecc" fontSize={16} fontFamily="monospace">Every click hits server.</text>
-            <text x={170} y={492} textAnchor="middle" fill="#22c55eaa" fontSize={16} fontFamily="monospace">Full analytics + revenue.</text>
+            <text x={170} y={470} textAnchor="middle" fill="#22c55ecc" fontSize={19} fontFamily="monospace">Every click hits server.</text>
+            <text x={170} y={496} textAnchor="middle" fill="#22c55eaa" fontSize={19} fontFamily="monospace">Full analytics + revenue.</text>
 
             {/* ✓ */}
-            <text x={170} y={520} textAnchor="middle" fill="#22c55e" fontSize={20} fontWeight="900" fontFamily="monospace" filter="url(#glow)">
+            <text x={170} y={530} textAnchor="middle" fill="#22c55e" fontSize={28} fontWeight="900" fontFamily="monospace" filter="url(#glow)">
               ✓ ALWAYS USE 302
             </text>
           </g>

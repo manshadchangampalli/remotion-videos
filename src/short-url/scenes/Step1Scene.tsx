@@ -140,37 +140,37 @@ export const Step1Scene: React.FC = () => {
   }) : 0;
   const chaosShakeY = chaosVisible ? Math.cos(frame * 1.8) * 4 : 0;
 
-  // CORRECTION PHASE: Load Balancer appears (frame 90-130)
-  const lbScale = spring({ frame: frame - 90, fps, config: { damping: 12, stiffness: 110 } });
-  const lbOpacity = interpolate(frame, [90, 115], [0, 1], {
+  // CORRECTION PHASE: Load Balancer appears (frame 80-110)
+  const lbScale = spring({ frame: frame - 82, fps, config: { damping: 10, stiffness: 180 } });
+  const lbOpacity = interpolate(frame, [82, 105], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+ 
+  // Line from Laptop → Load Balancer (frame 105-135)
+  const laptopToLBProgress = interpolate(frame, [105, 130], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const laptopToLBPacket = interpolate(frame, [135, 160], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  // Line from Laptop → Load Balancer (frame 115-155)
-  const laptopToLBProgress = interpolate(frame, [115, 150], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const laptopToLBPacket = interpolate(frame, [160, 190], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
-  // Five servers appear (staggered from frame 150-210)
+  // Five servers appear (staggered from frame 140-190)
   const serverScales = SERVERS.map((_, i) =>
-    spring({ frame: frame - (150 + i * 16), fps, config: { damping: 14, stiffness: 130 } })
+    spring({ frame: frame - (140 + i * 10), fps, config: { damping: 10, stiffness: 200 } })
   );
   const serverOpacities = SERVERS.map((_, i) =>
-    interpolate(frame, [150 + i * 16, 165 + i * 16], [0, 1], {
+    interpolate(frame, [140 + i * 10, 152 + i * 10], [0, 1], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
     })
   );
 
-  // Lines from Load Balancer → each server (staggered from frame 195-280)
+  // Lines from Load Balancer → each server (staggered from frame 170-220)
   const lbToServerProgress = SERVERS.map((_, i) =>
-    interpolate(frame, [195 + i * 20, 230 + i * 20], [0, 1], {
+    interpolate(frame, [170 + i * 12, 195 + i * 12], [0, 1], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
     })

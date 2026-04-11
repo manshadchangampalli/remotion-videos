@@ -20,8 +20,8 @@ import { OutroScene } from "./scenes/OutroScene";
 //   Outro:  73760ms– 77160ms → frames 2213– 2315
 
 // Global sync offset (positive delays visuals, negative advances them)
-// User says scenes are coming before audio, so we delay visuals by ~200ms (6 frames)
-const SYNC_OFFSET_FRAMES = 6; 
+// User says audio is too fast, so we advance visuals by ~400ms (12 frames)
+const SYNC_OFFSET_FRAMES = -12; 
 
 const fps = 30;
 const getFrame = (ms: number) => Math.floor((ms / 1000) * fps) + SYNC_OFFSET_FRAMES;

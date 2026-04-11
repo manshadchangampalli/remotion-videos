@@ -81,18 +81,18 @@ const LoadingSpinner: React.FC<{ x: number; y: number; progress: number; color: 
   );
 };
 
-// Positions for the miniaturized full architecture
-const O_LAPTOP = { x: 540, y: 220 };
-const O_LB = { x: 540, y: 550 };
+// Positions for the miniaturized full architecture (even more spread out for mobile)
+const O_LAPTOP = { x: 540, y: 180 };
+const O_LB     = { x: 540, y: 460 };
 const O_SERVERS = [
-  { x: 180, y: 870 },
-  { x: 360, y: 870 },
-  { x: 540, y: 870 },
-  { x: 720, y: 870 },
-  { x: 900, y: 870 },
+  { x: 120, y: 800 },
+  { x: 330, y: 800 },
+  { x: 540, y: 800 },
+  { x: 750, y: 800 },
+  { x: 960, y: 800 },
 ];
-const O_REDIS = { x: 340, y: 1200 };
-const O_DB = { x: 740, y: 1200 };
+const O_REDIS = { x: 300, y: 1180 };
+const O_DB    = { x: 780, y: 1180 };
 
 export const OutroScene: React.FC = () => {
   const frame = useCurrentFrame();
@@ -220,29 +220,33 @@ export const OutroScene: React.FC = () => {
 
           {/* Laptop with loading/redirect animation */}
           <g transform={`translate(${O_LAPTOP.x}, ${O_LAPTOP.y})`}>
-            <circle cx={0} cy={0} r={52} fill="#00f5ff0a" stroke="#00f5ff" strokeWidth={2} filter="url(#glow)" />
-            <MiniLaptop color="#00f5ff" />
+            <circle cx={0} cy={0} r={72} fill="#00f5ff0a" stroke="#00f5ff" strokeWidth={2} filter="url(#glow)" />
+            <g transform="scale(1.4)">
+              <MiniLaptop color="#00f5ff" />
+            </g>
             {/* Loading spinner overlaid */}
             {loadingProgress < 1 && (
-              <LoadingSpinner x={0} y={-45} progress={loadingProgress} color="#00f5ff" />
+              <LoadingSpinner x={0} y={-55} progress={loadingProgress} color="#00f5ff" />
             )}
             {/* Checkmark when done */}
             {checkmarkOpacity > 0 && (
-              <text x={0} y={-32} textAnchor="middle" fill="#00ff88" fontSize={28} fontWeight="900" opacity={checkmarkOpacity} filter="url(#glow)">
+              <text x={0} y={-42} textAnchor="middle" fill="#00ff88" fontSize={38} fontWeight="900" opacity={checkmarkOpacity} filter="url(#glow)">
                 ✓
               </text>
             )}
           </g>
-          <text x={O_LAPTOP.x} y={O_LAPTOP.y + 72} textAnchor="middle" fill="#00f5ff" fontSize={16} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
+          <text x={O_LAPTOP.x} y={O_LAPTOP.y + 105} textAnchor="middle" fill="#00f5ff" fontSize={24} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
             BROWSER
           </text>
 
           {/* Load Balancer */}
           <g transform={`translate(${O_LB.x}, ${O_LB.y})`}>
-            <circle cx={0} cy={0} r={55} fill="#facc1508" stroke="#facc15" strokeWidth={2} filter="url(#glow)" />
-            <MiniLB color="#facc15" />
+            <circle cx={0} cy={0} r={75} fill="#facc1508" stroke="#facc15" strokeWidth={2} filter="url(#glow)" />
+            <g transform="scale(1.4)">
+              <MiniLB color="#facc15" />
+            </g>
           </g>
-          <text x={O_LB.x} y={O_LB.y + 74} textAnchor="middle" fill="#facc15" fontSize={15} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
+          <text x={O_LB.x} y={O_LB.y + 105} textAnchor="middle" fill="#facc15" fontSize={22} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
             LOAD BALANCER
           </text>
 
@@ -250,10 +254,12 @@ export const OutroScene: React.FC = () => {
           {O_SERVERS.map((srv, i) => (
             <g key={i}>
               <g transform={`translate(${srv.x}, ${srv.y})`}>
-                <circle cx={0} cy={0} r={44} fill={`${serverColors[i]}0a`} stroke={serverColors[i]} strokeWidth={1.5} filter="url(#glow)" />
-                <MiniServer color={serverColors[i]} />
+                <circle cx={0} cy={0} r={65} fill={`${serverColors[i]}0a`} stroke={serverColors[i]} strokeWidth={2} filter="url(#glow)" />
+                <g transform="scale(1.4)">
+                  <MiniServer color={serverColors[i]} />
+                </g>
               </g>
-              <text x={srv.x} y={srv.y + 60} textAnchor="middle" fill={serverColors[i]} fontSize={12} fontWeight="700" fontFamily="monospace">
+              <text x={srv.x} y={srv.y + 90} textAnchor="middle" fill={serverColors[i]} fontSize={16} fontWeight="700" fontFamily="monospace">
                 SRV {i + 1}
               </text>
             </g>
@@ -261,19 +267,23 @@ export const OutroScene: React.FC = () => {
 
           {/* Redis */}
           <g transform={`translate(${O_REDIS.x}, ${O_REDIS.y})`}>
-            <circle cx={0} cy={0} r={50} fill="#ff222208" stroke="#ff4444" strokeWidth={1.8} filter="url(#glow)" />
-            <MiniRedis color="#ff4444" />
+            <circle cx={0} cy={0} r={75} fill="#ff222208" stroke="#ff4444" strokeWidth={2} filter="url(#glow)" />
+            <g transform="scale(1.4)">
+              <MiniRedis color="#ff4444" />
+            </g>
           </g>
-          <text x={O_REDIS.x} y={O_REDIS.y + 68} textAnchor="middle" fill="#ff4444" fontSize={14} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
+          <text x={O_REDIS.x} y={O_REDIS.y + 105} textAnchor="middle" fill="#ff4444" fontSize={22} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
             REDIS
           </text>
-
+ 
           {/* Database */}
           <g transform={`translate(${O_DB.x}, ${O_DB.y})`}>
-            <circle cx={0} cy={0} r={50} fill="#22c55e08" stroke="#22c55e" strokeWidth={1.8} filter="url(#glow)" />
-            <MiniDB color="#22c55e" />
+            <circle cx={0} cy={0} r={75} fill="#22c55e08" stroke="#22c55e" strokeWidth={2} filter="url(#glow)" />
+            <g transform="scale(1.4)">
+              <MiniDB color="#22c55e" />
+            </g>
           </g>
-          <text x={O_DB.x} y={O_DB.y + 68} textAnchor="middle" fill="#22c55e" fontSize={14} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
+          <text x={O_DB.x} y={O_DB.y + 105} textAnchor="middle" fill="#22c55e" fontSize={22} fontWeight="800" fontFamily="monospace" filter="url(#glow)">
             NoSQL DB
           </text>
         </g>
