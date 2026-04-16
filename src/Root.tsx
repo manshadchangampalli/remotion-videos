@@ -6,6 +6,8 @@ import { InstagramLikeComposition } from "./instagram-like/Composition";
 import { LLMComposition, TOTAL_FRAMES as LLM_FRAMES } from "./llm/Composition";
 import { E2EEComposition } from "./e2ee/Composition";
 import { ShazamComposition } from "./shazam/Composition";
+import { MyComposition as MonolithicComposition } from "./monolithic-vs-microservices/Composition";
+import { NpmVsPnpm } from "./npm-vs-pnpm/NpmVsPnpm";
 
 // Loading the Outfit font for a premium look
 import "@remotion/google-fonts/Outfit";
@@ -57,6 +59,22 @@ export const RemotionRoot: React.FC = () => {
         id="ShazamConstellation"
         component={ShazamComposition}
         durationInFrames={1710}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="MonolithicVsMicroservices"
+        component={MonolithicComposition}
+        durationInFrames={2700}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="NpmVsPnpm"
+        component={NpmVsPnpm}
+        durationInFrames={1494}
         fps={30}
         width={1080}
         height={1920}
