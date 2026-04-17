@@ -8,6 +8,7 @@ import { E2EEComposition } from "./e2ee/Composition";
 import { ShazamComposition } from "./shazam/Composition";
 import { MyComposition as MonolithicComposition } from "./monolithic-vs-microservices/Composition";
 import { NpmVsPnpm } from "./npm-vs-pnpm/NpmVsPnpm";
+import { VPNComposition, TOTAL_FRAMES as VPN_FRAMES } from "./vpn/Composition";
 
 // Loading the Outfit font for a premium look
 import "@remotion/google-fonts/Outfit";
@@ -75,6 +76,14 @@ export const RemotionRoot: React.FC = () => {
         id="NpmVsPnpm"
         component={NpmVsPnpm}
         durationInFrames={1494}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="VPNRouting"
+        component={VPNComposition}
+        durationInFrames={VPN_FRAMES}
         fps={30}
         width={1080}
         height={1920}
