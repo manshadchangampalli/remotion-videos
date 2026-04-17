@@ -1,0 +1,1563 @@
+[
+  {
+    "text": "You",
+    "startMs": 220,
+    "endMs": 320,
+    "timestampMs": 400,
+    "confidence": 0.863031
+  },
+  {
+    "text": " are",
+    "startMs": 320,
+    "endMs": 640,
+    "timestampMs": 720,
+    "confidence": 0.929071
+  },
+  {
+    "text": " in",
+    "startMs": 640,
+    "endMs": 850,
+    "timestampMs": 840,
+    "confidence": 0.987349
+  },
+  {
+    "text": " India",
+    "startMs": 850,
+    "endMs": 1380,
+    "timestampMs": 1180,
+    "confidence": 0.997975
+  },
+  {
+    "text": ",",
+    "startMs": 1380,
+    "endMs": 1800,
+    "timestampMs": 1820,
+    "confidence": 0.352488
+  },
+  {
+    "text": " you",
+    "startMs": 1800,
+    "endMs": 1910,
+    "timestampMs": 1860,
+    "confidence": 0.89947
+  },
+  {
+    "text": " open",
+    "startMs": 1910,
+    "endMs": 2280,
+    "timestampMs": 2080,
+    "confidence": 0.97834
+  },
+  {
+    "text": " Tik",
+    "startMs": 2280,
+    "endMs": 2540,
+    "timestampMs": 2300,
+    "confidence": 0.895945
+  },
+  {
+    "text": "Tok",
+    "startMs": 2540,
+    "endMs": 2950,
+    "timestampMs": 2560,
+    "confidence": 0.837154
+  },
+  {
+    "text": ",",
+    "startMs": 2950,
+    "endMs": 2980,
+    "timestampMs": 2920,
+    "confidence": 0.512331
+  },
+  {
+    "text": " and",
+    "startMs": 2980,
+    "endMs": 3120,
+    "timestampMs": 3020,
+    "confidence": 0.815328
+  },
+  {
+    "text": " nothing",
+    "startMs": 3120,
+    "endMs": 3740,
+    "timestampMs": 3560,
+    "confidence": 0.964629
+  },
+  {
+    "text": " loads",
+    "startMs": 3740,
+    "endMs": 4560,
+    "timestampMs": 3960,
+    "confidence": 0.911548
+  },
+  {
+    "text": ",",
+    "startMs": 4560,
+    "endMs": 4580,
+    "timestampMs": 4520,
+    "confidence": 0.175792
+  },
+  {
+    "text": " it",
+    "startMs": 4580,
+    "endMs": 4680,
+    "timestampMs": 4620,
+    "confidence": 0.503876
+  },
+  {
+    "text": "'s",
+    "startMs": 4680,
+    "endMs": 4820,
+    "timestampMs": 4680,
+    "confidence": 0.965696
+  },
+  {
+    "text": " blocked",
+    "startMs": 4820,
+    "endMs": 5210,
+    "timestampMs": 5020,
+    "confidence": 0.99481
+  },
+  {
+    "text": " by",
+    "startMs": 5210,
+    "endMs": 5290,
+    "timestampMs": 5340,
+    "confidence": 0.988772
+  },
+  {
+    "text": " the",
+    "startMs": 5290,
+    "endMs": 5440,
+    "timestampMs": 5460,
+    "confidence": 0.982034
+  },
+  {
+    "text": " government",
+    "startMs": 5440,
+    "endMs": 5950,
+    "timestampMs": 5760,
+    "confidence": 0.904384
+  },
+  {
+    "text": ",",
+    "startMs": 5950,
+    "endMs": 6620,
+    "timestampMs": 6360,
+    "confidence": 0.384302
+  },
+  {
+    "text": " but",
+    "startMs": 6620,
+    "endMs": 6680,
+    "timestampMs": 6660,
+    "confidence": 0.552957
+  },
+  {
+    "text": " you",
+    "startMs": 6680,
+    "endMs": 6960,
+    "timestampMs": 6760,
+    "confidence": 0.996639
+  },
+  {
+    "text": " turn",
+    "startMs": 6960,
+    "endMs": 7340,
+    "timestampMs": 6980,
+    "confidence": 0.995458
+  },
+  {
+    "text": " on",
+    "startMs": 7340,
+    "endMs": 7530,
+    "timestampMs": 7120,
+    "confidence": 0.994268
+  },
+  {
+    "text": " a",
+    "startMs": 7530,
+    "endMs": 7620,
+    "timestampMs": 7180,
+    "confidence": 0.97907
+  },
+  {
+    "text": " VPN",
+    "startMs": 7620,
+    "endMs": 8180,
+    "timestampMs": 7380,
+    "confidence": 0.997575
+  },
+  {
+    "text": " and",
+    "startMs": 8180,
+    "endMs": 8210,
+    "timestampMs": 8240,
+    "confidence": 0.574241
+  },
+  {
+    "text": " the",
+    "startMs": 8210,
+    "endMs": 8460,
+    "timestampMs": 8340,
+    "confidence": 0.99169
+  },
+  {
+    "text": " video",
+    "startMs": 8460,
+    "endMs": 8940,
+    "timestampMs": 8660,
+    "confidence": 0.990238
+  },
+  {
+    "text": " starts",
+    "startMs": 8940,
+    "endMs": 9510,
+    "timestampMs": 8980,
+    "confidence": 0.986698
+  },
+  {
+    "text": " playing",
+    "startMs": 9510,
+    "endMs": 10160,
+    "timestampMs": 9380,
+    "confidence": 0.991989
+  },
+  {
+    "text": " instantly",
+    "startMs": 10160,
+    "endMs": 11330,
+    "timestampMs": 10040,
+    "confidence": 0.993665
+  },
+  {
+    "text": ".",
+    "startMs": 11330,
+    "endMs": 11400,
+    "timestampMs": 11240,
+    "confidence": 0.947068
+  },
+  {
+    "text": " How",
+    "startMs": 11400,
+    "endMs": 11690,
+    "timestampMs": 11420,
+    "confidence": 0.996518
+  },
+  {
+    "text": " did",
+    "startMs": 11690,
+    "endMs": 11960,
+    "timestampMs": 11580,
+    "confidence": 0.993199
+  },
+  {
+    "text": " you",
+    "startMs": 11960,
+    "endMs": 12240,
+    "timestampMs": 11700,
+    "confidence": 0.99791
+  },
+  {
+    "text": " bypass",
+    "startMs": 12240,
+    "endMs": 12800,
+    "timestampMs": 12080,
+    "confidence": 0.99658
+  },
+  {
+    "text": " a",
+    "startMs": 12800,
+    "endMs": 12890,
+    "timestampMs": 12440,
+    "confidence": 0.995797
+  },
+  {
+    "text": " national",
+    "startMs": 12890,
+    "endMs": 13630,
+    "timestampMs": 12760,
+    "confidence": 0.778215
+  },
+  {
+    "text": " firewall",
+    "startMs": 13630,
+    "endMs": 14620,
+    "timestampMs": 13380,
+    "confidence": 0.961469
+  },
+  {
+    "text": "?",
+    "startMs": 14620,
+    "endMs": 14680,
+    "timestampMs": 14540,
+    "confidence": 0.950173
+  },
+  {
+    "text": " You",
+    "startMs": 14680,
+    "endMs": 14950,
+    "timestampMs": 14700,
+    "confidence": 0.997914
+  },
+  {
+    "text": " didn",
+    "startMs": 14950,
+    "endMs": 15270,
+    "timestampMs": 15000,
+    "confidence": 0.984583
+  },
+  {
+    "text": "'t",
+    "startMs": 15270,
+    "endMs": 15450,
+    "timestampMs": 15260,
+    "confidence": 0.999375
+  },
+  {
+    "text": ",",
+    "startMs": 15450,
+    "endMs": 15720,
+    "timestampMs": 15580,
+    "confidence": 0.559534
+  },
+  {
+    "text": " you",
+    "startMs": 15720,
+    "endMs": 15860,
+    "timestampMs": 15840,
+    "confidence": 0.988391
+  },
+  {
+    "text": " just",
+    "startMs": 15860,
+    "endMs": 16200,
+    "timestampMs": 16040,
+    "confidence": 0.984913
+  },
+  {
+    "text": " used",
+    "startMs": 16200,
+    "endMs": 16540,
+    "timestampMs": 16240,
+    "confidence": 0.988802
+  },
+  {
+    "text": " a",
+    "startMs": 16540,
+    "endMs": 16620,
+    "timestampMs": 16520,
+    "confidence": 0.994273
+  },
+  {
+    "text": " middle",
+    "startMs": 16620,
+    "endMs": 17120,
+    "timestampMs": 16780,
+    "confidence": 0.982711
+  },
+  {
+    "text": "man",
+    "startMs": 17120,
+    "endMs": 17360,
+    "timestampMs": 17060,
+    "confidence": 0.949586
+  },
+  {
+    "text": ".",
+    "startMs": 17360,
+    "endMs": 17680,
+    "timestampMs": 17720,
+    "confidence": 0.972286
+  },
+  {
+    "text": " Normally",
+    "startMs": 17680,
+    "endMs": 18210,
+    "timestampMs": 18420,
+    "confidence": 0.979241
+  },
+  {
+    "text": ",",
+    "startMs": 18210,
+    "endMs": 18340,
+    "timestampMs": 18600,
+    "confidence": 0.945291
+  },
+  {
+    "text": " your",
+    "startMs": 18340,
+    "endMs": 18670,
+    "timestampMs": 18780,
+    "confidence": 0.986162
+  },
+  {
+    "text": " internet",
+    "startMs": 18670,
+    "endMs": 19200,
+    "timestampMs": 19020,
+    "confidence": 0.790926
+  },
+  {
+    "text": " provider",
+    "startMs": 19200,
+    "endMs": 19660,
+    "timestampMs": 19380,
+    "confidence": 0.998868
+  },
+  {
+    "text": " acts",
+    "startMs": 19660,
+    "endMs": 19920,
+    "timestampMs": 19760,
+    "confidence": 0.979768
+  },
+  {
+    "text": " like",
+    "startMs": 19920,
+    "endMs": 20180,
+    "timestampMs": 19920,
+    "confidence": 0.997109
+  },
+  {
+    "text": " a",
+    "startMs": 20180,
+    "endMs": 20240,
+    "timestampMs": 20000,
+    "confidence": 0.9959
+  },
+  {
+    "text": " border",
+    "startMs": 20240,
+    "endMs": 20640,
+    "timestampMs": 20280,
+    "confidence": 0.906916
+  },
+  {
+    "text": " guard",
+    "startMs": 20640,
+    "endMs": 21150,
+    "timestampMs": 20580,
+    "confidence": 0.990641
+  },
+  {
+    "text": ".",
+    "startMs": 21150,
+    "endMs": 21240,
+    "timestampMs": 21140,
+    "confidence": 0.771811
+  },
+  {
+    "text": " When",
+    "startMs": 21240,
+    "endMs": 21460,
+    "timestampMs": 21220,
+    "confidence": 0.999178
+  },
+  {
+    "text": " your",
+    "startMs": 21460,
+    "endMs": 21680,
+    "timestampMs": 21300,
+    "confidence": 0.985485
+  },
+  {
+    "text": " phone",
+    "startMs": 21680,
+    "endMs": 21960,
+    "timestampMs": 21480,
+    "confidence": 0.998982
+  },
+  {
+    "text": " asks",
+    "startMs": 21960,
+    "endMs": 22200,
+    "timestampMs": 21740,
+    "confidence": 0.995458
+  },
+  {
+    "text": " for",
+    "startMs": 22200,
+    "endMs": 22340,
+    "timestampMs": 21940,
+    "confidence": 0.995986
+  },
+  {
+    "text": " Tik",
+    "startMs": 22340,
+    "endMs": 22640,
+    "timestampMs": 22080,
+    "confidence": 0.983978
+  },
+  {
+    "text": "Tok",
+    "startMs": 22640,
+    "endMs": 22690,
+    "timestampMs": 22300,
+    "confidence": 0.970226
+  },
+  {
+    "text": ",",
+    "startMs": 22690,
+    "endMs": 22800,
+    "timestampMs": 22640,
+    "confidence": 0.961474
+  },
+  {
+    "text": " the",
+    "startMs": 22800,
+    "endMs": 22930,
+    "timestampMs": 22720,
+    "confidence": 0.995239
+  },
+  {
+    "text": " guard",
+    "startMs": 22930,
+    "endMs": 23250,
+    "timestampMs": 22900,
+    "confidence": 0.987547
+  },
+  {
+    "text": " checks",
+    "startMs": 23250,
+    "endMs": 23540,
+    "timestampMs": 23180,
+    "confidence": 0.9962
+  },
+  {
+    "text": " the",
+    "startMs": 23540,
+    "endMs": 23690,
+    "timestampMs": 23400,
+    "confidence": 0.995315
+  },
+  {
+    "text": " band",
+    "startMs": 23690,
+    "endMs": 23930,
+    "timestampMs": 23580,
+    "confidence": 0.513081
+  },
+  {
+    "text": " list",
+    "startMs": 23930,
+    "endMs": 24200,
+    "timestampMs": 23780,
+    "confidence": 0.831042
+  },
+  {
+    "text": ",",
+    "startMs": 24200,
+    "endMs": 24320,
+    "timestampMs": 24060,
+    "confidence": 0.992432
+  },
+  {
+    "text": " sees",
+    "startMs": 24320,
+    "endMs": 24470,
+    "timestampMs": 24360,
+    "confidence": 0.985714
+  },
+  {
+    "text": " the",
+    "startMs": 24470,
+    "endMs": 24630,
+    "timestampMs": 24560,
+    "confidence": 0.995513
+  },
+  {
+    "text": " name",
+    "startMs": 24630,
+    "endMs": 24850,
+    "timestampMs": 24740,
+    "confidence": 0.999157
+  },
+  {
+    "text": ",",
+    "startMs": 24850,
+    "endMs": 25160,
+    "timestampMs": 25120,
+    "confidence": 0.876608
+  },
+  {
+    "text": " and",
+    "startMs": 25160,
+    "endMs": 25410,
+    "timestampMs": 25200,
+    "confidence": 0.987922
+  },
+  {
+    "text": " throws",
+    "startMs": 25410,
+    "endMs": 25660,
+    "timestampMs": 25520,
+    "confidence": 0.889799
+  },
+  {
+    "text": " your",
+    "startMs": 25660,
+    "endMs": 26050,
+    "timestampMs": 25800,
+    "confidence": 0.796927
+  },
+  {
+    "text": " request",
+    "startMs": 26050,
+    "endMs": 26730,
+    "timestampMs": 26060,
+    "confidence": 0.976144
+  },
+  {
+    "text": " in",
+    "startMs": 26730,
+    "endMs": 26890,
+    "timestampMs": 26340,
+    "confidence": 0.993176
+  },
+  {
+    "text": " the",
+    "startMs": 26890,
+    "endMs": 27220,
+    "timestampMs": 26440,
+    "confidence": 0.985567
+  },
+  {
+    "text": " trash",
+    "startMs": 27220,
+    "endMs": 27940,
+    "timestampMs": 26740,
+    "confidence": 0.989485
+  },
+  {
+    "text": ".",
+    "startMs": 27940,
+    "endMs": 28000,
+    "timestampMs": 27660,
+    "confidence": 0.991295
+  },
+  {
+    "text": " But",
+    "startMs": 28050,
+    "endMs": 28190,
+    "timestampMs": 28000,
+    "confidence": 0.992076
+  },
+  {
+    "text": " when",
+    "startMs": 28190,
+    "endMs": 28440,
+    "timestampMs": 28120,
+    "confidence": 0.994734
+  },
+  {
+    "text": " you",
+    "startMs": 28440,
+    "endMs": 28630,
+    "timestampMs": 28200,
+    "confidence": 0.998506
+  },
+  {
+    "text": " turn",
+    "startMs": 28630,
+    "endMs": 28920,
+    "timestampMs": 28420,
+    "confidence": 0.990382
+  },
+  {
+    "text": " on",
+    "startMs": 28920,
+    "endMs": 29000,
+    "timestampMs": 28560,
+    "confidence": 0.987637
+  },
+  {
+    "text": " a",
+    "startMs": 29000,
+    "endMs": 29060,
+    "timestampMs": 28620,
+    "confidence": 0.989083
+  },
+  {
+    "text": " VPN",
+    "startMs": 29060,
+    "endMs": 29250,
+    "timestampMs": 28800,
+    "confidence": 0.999338
+  },
+  {
+    "text": " and",
+    "startMs": 29250,
+    "endMs": 29490,
+    "timestampMs": 29340,
+    "confidence": 0.945471
+  },
+  {
+    "text": " connect",
+    "startMs": 29490,
+    "endMs": 29900,
+    "timestampMs": 29600,
+    "confidence": 0.99806
+  },
+  {
+    "text": " to",
+    "startMs": 29900,
+    "endMs": 30010,
+    "timestampMs": 29740,
+    "confidence": 0.995285
+  },
+  {
+    "text": " Singapore",
+    "startMs": 30010,
+    "endMs": 30710,
+    "timestampMs": 30020,
+    "confidence": 0.968235
+  },
+  {
+    "text": ",",
+    "startMs": 30710,
+    "endMs": 30780,
+    "timestampMs": 30740,
+    "confidence": 0.987466
+  },
+  {
+    "text": " your",
+    "startMs": 30780,
+    "endMs": 31000,
+    "timestampMs": 30860,
+    "confidence": 0.980357
+  },
+  {
+    "text": " phone",
+    "startMs": 31000,
+    "endMs": 31280,
+    "timestampMs": 31080,
+    "confidence": 0.99861
+  },
+  {
+    "text": " completely",
+    "startMs": 31280,
+    "endMs": 31910,
+    "timestampMs": 31600,
+    "confidence": 0.973918
+  },
+  {
+    "text": " stops",
+    "startMs": 31910,
+    "endMs": 32260,
+    "timestampMs": 32120,
+    "confidence": 0.978844
+  },
+  {
+    "text": " asking",
+    "startMs": 32260,
+    "endMs": 32720,
+    "timestampMs": 32660,
+    "confidence": 0.998213
+  },
+  {
+    "text": " for",
+    "startMs": 32720,
+    "endMs": 32970,
+    "timestampMs": 32840,
+    "confidence": 0.998917
+  },
+  {
+    "text": " Tik",
+    "startMs": 32970,
+    "endMs": 33220,
+    "timestampMs": 32980,
+    "confidence": 0.997221
+  },
+  {
+    "text": "Tok",
+    "startMs": 33220,
+    "endMs": 33400,
+    "timestampMs": 33200,
+    "confidence": 0.992034
+  },
+  {
+    "text": ".",
+    "startMs": 33400,
+    "endMs": 33720,
+    "timestampMs": 33700,
+    "confidence": 0.883892
+  },
+  {
+    "text": " Instead",
+    "startMs": 33720,
+    "endMs": 34220,
+    "timestampMs": 34160,
+    "confidence": 0.997548
+  },
+  {
+    "text": ",",
+    "startMs": 34220,
+    "endMs": 34370,
+    "timestampMs": 34440,
+    "confidence": 0.990788
+  },
+  {
+    "text": " it",
+    "startMs": 34370,
+    "endMs": 34610,
+    "timestampMs": 34660,
+    "confidence": 0.99601
+  },
+  {
+    "text": " just",
+    "startMs": 34610,
+    "endMs": 34790,
+    "timestampMs": 34780,
+    "confidence": 0.982643
+  },
+  {
+    "text": " asks",
+    "startMs": 34790,
+    "endMs": 35080,
+    "timestampMs": 35040,
+    "confidence": 0.991128
+  },
+  {
+    "text": " the",
+    "startMs": 35080,
+    "endMs": 35290,
+    "timestampMs": 35300,
+    "confidence": 0.990983
+  },
+  {
+    "text": " guard",
+    "startMs": 35290,
+    "endMs": 35640,
+    "timestampMs": 35480,
+    "confidence": 0.995321
+  },
+  {
+    "text": ",",
+    "startMs": 35640,
+    "endMs": 35800,
+    "timestampMs": 35960,
+    "confidence": 0.325614
+  },
+  {
+    "text": " \"",
+    "startMs": 35800,
+    "endMs": 36130,
+    "timestampMs": 36180,
+    "confidence": 0.698015
+  },
+  {
+    "text": "Connect",
+    "startMs": 36130,
+    "endMs": 36410,
+    "timestampMs": 36220,
+    "confidence": 0.739727
+  },
+  {
+    "text": " me",
+    "startMs": 36410,
+    "endMs": 36510,
+    "timestampMs": 36440,
+    "confidence": 0.923851
+  },
+  {
+    "text": " to",
+    "startMs": 36510,
+    "endMs": 36640,
+    "timestampMs": 36560,
+    "confidence": 0.996751
+  },
+  {
+    "text": " this",
+    "startMs": 36640,
+    "endMs": 36930,
+    "timestampMs": 36700,
+    "confidence": 0.973197
+  },
+  {
+    "text": " random",
+    "startMs": 36930,
+    "endMs": 37360,
+    "timestampMs": 37020,
+    "confidence": 0.993988
+  },
+  {
+    "text": " server",
+    "startMs": 37360,
+    "endMs": 37770,
+    "timestampMs": 37460,
+    "confidence": 0.993784
+  },
+  {
+    "text": " in",
+    "startMs": 37770,
+    "endMs": 37930,
+    "timestampMs": 37660,
+    "confidence": 0.99339
+  },
+  {
+    "text": " Singapore",
+    "startMs": 37930,
+    "endMs": 38880,
+    "timestampMs": 37960,
+    "confidence": 0.995562
+  },
+  {
+    "text": ".\"",
+    "startMs": 38880,
+    "endMs": 38960,
+    "timestampMs": 38760,
+    "confidence": 0.682824
+  },
+  {
+    "text": " Singapore",
+    "startMs": 38960,
+    "endMs": 39670,
+    "timestampMs": 39100,
+    "confidence": 0.948839
+  },
+  {
+    "text": " is",
+    "startMs": 39670,
+    "endMs": 39820,
+    "timestampMs": 39520,
+    "confidence": 0.992057
+  },
+  {
+    "text": " not",
+    "startMs": 39820,
+    "endMs": 40050,
+    "timestampMs": 39780,
+    "confidence": 0.978655
+  },
+  {
+    "text": " on",
+    "startMs": 40050,
+    "endMs": 40200,
+    "timestampMs": 40000,
+    "confidence": 0.989085
+  },
+  {
+    "text": " the",
+    "startMs": 40200,
+    "endMs": 40420,
+    "timestampMs": 40100,
+    "confidence": 0.994129
+  },
+  {
+    "text": " band",
+    "startMs": 40420,
+    "endMs": 40720,
+    "timestampMs": 40280,
+    "confidence": 0.973229
+  },
+  {
+    "text": " list",
+    "startMs": 40720,
+    "endMs": 41130,
+    "timestampMs": 40520,
+    "confidence": 0.995587
+  },
+  {
+    "text": ",",
+    "startMs": 41130,
+    "endMs": 41200,
+    "timestampMs": 40920,
+    "confidence": 0.938593
+  },
+  {
+    "text": " so",
+    "startMs": 41200,
+    "endMs": 41450,
+    "timestampMs": 41240,
+    "confidence": 0.996415
+  },
+  {
+    "text": " the",
+    "startMs": 41450,
+    "endMs": 41580,
+    "timestampMs": 41480,
+    "confidence": 0.965202
+  },
+  {
+    "text": " guard",
+    "startMs": 41580,
+    "endMs": 41970,
+    "timestampMs": 41680,
+    "confidence": 0.996607
+  },
+  {
+    "text": " lets",
+    "startMs": 41970,
+    "endMs": 42340,
+    "timestampMs": 41840,
+    "confidence": 0.976703
+  },
+  {
+    "text": " you",
+    "startMs": 42340,
+    "endMs": 42510,
+    "timestampMs": 42000,
+    "confidence": 0.998847
+  },
+  {
+    "text": " right",
+    "startMs": 42510,
+    "endMs": 43220,
+    "timestampMs": 42160,
+    "confidence": 0.468493
+  },
+  {
+    "text": " through",
+    "startMs": 43220,
+    "endMs": 43620,
+    "timestampMs": 42420,
+    "confidence": 0.994082
+  },
+  {
+    "text": ".",
+    "startMs": 43620,
+    "endMs": 43800,
+    "timestampMs": 43040,
+    "confidence": 0.9203
+  },
+  {
+    "text": " Once",
+    "startMs": 43800,
+    "endMs": 44060,
+    "timestampMs": 43760,
+    "confidence": 0.998698
+  },
+  {
+    "text": " your",
+    "startMs": 44060,
+    "endMs": 44320,
+    "timestampMs": 43940,
+    "confidence": 0.99268
+  },
+  {
+    "text": " connection",
+    "startMs": 44320,
+    "endMs": 44980,
+    "timestampMs": 44160,
+    "confidence": 0.999439
+  },
+  {
+    "text": " reaches",
+    "startMs": 44980,
+    "endMs": 45620,
+    "timestampMs": 44600,
+    "confidence": 0.998089
+  },
+  {
+    "text": " Singapore",
+    "startMs": 45620,
+    "endMs": 46060,
+    "timestampMs": 45020,
+    "confidence": 0.994907
+  },
+  {
+    "text": ",",
+    "startMs": 46060,
+    "endMs": 46160,
+    "timestampMs": 45600,
+    "confidence": 0.986862
+  },
+  {
+    "text": " that",
+    "startMs": 46160,
+    "endMs": 46410,
+    "timestampMs": 45740,
+    "confidence": 0.989321
+  },
+  {
+    "text": " VPN",
+    "startMs": 46410,
+    "endMs": 46620,
+    "timestampMs": 46020,
+    "confidence": 0.998917
+  },
+  {
+    "text": " server",
+    "startMs": 46620,
+    "endMs": 47020,
+    "timestampMs": 46500,
+    "confidence": 0.981742
+  },
+  {
+    "text": " does",
+    "startMs": 47020,
+    "endMs": 47470,
+    "timestampMs": 46860,
+    "confidence": 0.997198
+  },
+  {
+    "text": " the",
+    "startMs": 47470,
+    "endMs": 47560,
+    "timestampMs": 47060,
+    "confidence": 0.990601
+  },
+  {
+    "text": " work",
+    "startMs": 47560,
+    "endMs": 47730,
+    "timestampMs": 47240,
+    "confidence": 0.998308
+  },
+  {
+    "text": " for",
+    "startMs": 47730,
+    "endMs": 47920,
+    "timestampMs": 47640,
+    "confidence": 0.978325
+  },
+  {
+    "text": " you",
+    "startMs": 47920,
+    "endMs": 48350,
+    "timestampMs": 47920,
+    "confidence": 0.999193
+  },
+  {
+    "text": ".",
+    "startMs": 48350,
+    "endMs": 48400,
+    "timestampMs": 48320,
+    "confidence": 0.932741
+  },
+  {
+    "text": " It",
+    "startMs": 48400,
+    "endMs": 48530,
+    "timestampMs": 48400,
+    "confidence": 0.998571
+  },
+  {
+    "text": " connects",
+    "startMs": 48530,
+    "endMs": 49060,
+    "timestampMs": 48580,
+    "confidence": 0.998157
+  },
+  {
+    "text": " to",
+    "startMs": 49060,
+    "endMs": 49180,
+    "timestampMs": 48820,
+    "confidence": 0.995873
+  },
+  {
+    "text": " Tik",
+    "startMs": 49180,
+    "endMs": 49390,
+    "timestampMs": 48960,
+    "confidence": 0.992078
+  },
+  {
+    "text": "Tok",
+    "startMs": 49390,
+    "endMs": 49600,
+    "timestampMs": 49180,
+    "confidence": 0.991369
+  },
+  {
+    "text": ",",
+    "startMs": 49600,
+    "endMs": 49690,
+    "timestampMs": 49520,
+    "confidence": 0.99843
+  },
+  {
+    "text": " downloads",
+    "startMs": 49690,
+    "endMs": 50280,
+    "timestampMs": 49760,
+    "confidence": 0.998159
+  },
+  {
+    "text": " the",
+    "startMs": 50280,
+    "endMs": 50460,
+    "timestampMs": 50060,
+    "confidence": 0.997371
+  },
+  {
+    "text": " video",
+    "startMs": 50460,
+    "endMs": 50790,
+    "timestampMs": 50320,
+    "confidence": 0.998858
+  },
+  {
+    "text": ",",
+    "startMs": 50790,
+    "endMs": 50930,
+    "timestampMs": 50600,
+    "confidence": 0.892225
+  },
+  {
+    "text": " and",
+    "startMs": 50930,
+    "endMs": 51110,
+    "timestampMs": 50620,
+    "confidence": 0.997944
+  },
+  {
+    "text": " streams",
+    "startMs": 51110,
+    "endMs": 51560,
+    "timestampMs": 50960,
+    "confidence": 0.967286
+  },
+  {
+    "text": " it",
+    "startMs": 51560,
+    "endMs": 51700,
+    "timestampMs": 51220,
+    "confidence": 0.990076
+  },
+  {
+    "text": " straight",
+    "startMs": 51700,
+    "endMs": 52220,
+    "timestampMs": 51520,
+    "confidence": 0.991038
+  },
+  {
+    "text": " back",
+    "startMs": 52220,
+    "endMs": 52610,
+    "timestampMs": 51940,
+    "confidence": 0.985417
+  },
+  {
+    "text": " to",
+    "startMs": 52610,
+    "endMs": 52610,
+    "timestampMs": 52120,
+    "confidence": 0.992731
+  },
+  {
+    "text": " your",
+    "startMs": 52610,
+    "endMs": 52870,
+    "timestampMs": 52220,
+    "confidence": 0.988936
+  },
+  {
+    "text": " phone",
+    "startMs": 52870,
+    "endMs": 53380,
+    "timestampMs": 52420,
+    "confidence": 0.9993
+  },
+  {
+    "text": ".",
+    "startMs": 53380,
+    "endMs": 53480,
+    "timestampMs": 53140,
+    "confidence": 0.996175
+  },
+  {
+    "text": " Your",
+    "startMs": 53480,
+    "endMs": 53720,
+    "timestampMs": 53480,
+    "confidence": 0.78401
+  },
+  {
+    "text": " internet",
+    "startMs": 53720,
+    "endMs": 54220,
+    "timestampMs": 53740,
+    "confidence": 0.972294
+  },
+  {
+    "text": " provider",
+    "startMs": 54220,
+    "endMs": 54700,
+    "timestampMs": 54100,
+    "confidence": 0.998498
+  },
+  {
+    "text": " just",
+    "startMs": 54700,
+    "endMs": 54950,
+    "timestampMs": 54520,
+    "confidence": 0.990692
+  },
+  {
+    "text": " sees",
+    "startMs": 54950,
+    "endMs": 55180,
+    "timestampMs": 54700,
+    "confidence": 0.997801
+  },
+  {
+    "text": " random",
+    "startMs": 55180,
+    "endMs": 55550,
+    "timestampMs": 55100,
+    "confidence": 0.991299
+  },
+  {
+    "text": " data",
+    "startMs": 55550,
+    "endMs": 55800,
+    "timestampMs": 55460,
+    "confidence": 0.999127
+  },
+  {
+    "text": " returning",
+    "startMs": 55800,
+    "endMs": 56360,
+    "timestampMs": 55900,
+    "confidence": 0.996639
+  },
+  {
+    "text": " from",
+    "startMs": 56360,
+    "endMs": 56570,
+    "timestampMs": 56220,
+    "confidence": 0.996052
+  },
+  {
+    "text": " Singapore",
+    "startMs": 56570,
+    "endMs": 57330,
+    "timestampMs": 56480,
+    "confidence": 0.998422
+  },
+  {
+    "text": ".",
+    "startMs": 57330,
+    "endMs": 57400,
+    "timestampMs": 56980,
+    "confidence": 0.984825
+  },
+  {
+    "text": " They",
+    "startMs": 57400,
+    "endMs": 57730,
+    "timestampMs": 57440,
+    "confidence": 0.990987
+  },
+  {
+    "text": " have",
+    "startMs": 57730,
+    "endMs": 58020,
+    "timestampMs": 57580,
+    "confidence": 0.988433
+  },
+  {
+    "text": " absolutely",
+    "startMs": 58020,
+    "endMs": 58750,
+    "timestampMs": 58000,
+    "confidence": 0.943232
+  },
+  {
+    "text": " no",
+    "startMs": 58750,
+    "endMs": 58900,
+    "timestampMs": 58620,
+    "confidence": 0.982008
+  },
+  {
+    "text": " idea",
+    "startMs": 58900,
+    "endMs": 59200,
+    "timestampMs": 59100,
+    "confidence": 0.99838
+  },
+  {
+    "text": " it",
+    "startMs": 59200,
+    "endMs": 59390,
+    "timestampMs": 59340,
+    "confidence": 0.989242
+  },
+  {
+    "text": "'s",
+    "startMs": 59390,
+    "endMs": 59560,
+    "timestampMs": 59400,
+    "confidence": 0.976995
+  },
+  {
+    "text": " a",
+    "startMs": 59560,
+    "endMs": 59570,
+    "timestampMs": 59460,
+    "confidence": 0.995731
+  },
+  {
+    "text": " Tik",
+    "startMs": 59570,
+    "endMs": 59800,
+    "timestampMs": 59640,
+    "confidence": 0.991431
+  },
+  {
+    "text": "Tok",
+    "startMs": 59800,
+    "endMs": 60030,
+    "timestampMs": 59900,
+    "confidence": 0.978172
+  },
+  {
+    "text": " video",
+    "startMs": 60030,
+    "endMs": 60370,
+    "timestampMs": 60220,
+    "confidence": 0.997849
+  },
+  {
+    "text": ".",
+    "startMs": 60370,
+    "endMs": 60640,
+    "timestampMs": 61180,
+    "confidence": 0.937732
+  },
+  {
+    "text": " A",
+    "startMs": 60640,
+    "endMs": 60920,
+    "timestampMs": 61260,
+    "confidence": 0.992769
+  },
+  {
+    "text": " VPN",
+    "startMs": 60920,
+    "endMs": 61230,
+    "timestampMs": 61480,
+    "confidence": 0.999338
+  },
+  {
+    "text": " doesn",
+    "startMs": 61230,
+    "endMs": 61360,
+    "timestampMs": 61920,
+    "confidence": 0.994433
+  },
+  {
+    "text": "'t",
+    "startMs": 61360,
+    "endMs": 61560,
+    "timestampMs": 62040,
+    "confidence": 0.999916
+  },
+  {
+    "text": " break",
+    "startMs": 61560,
+    "endMs": 61920,
+    "timestampMs": 62360,
+    "confidence": 0.98984
+  },
+  {
+    "text": " walls",
+    "startMs": 61920,
+    "endMs": 62310,
+    "timestampMs": 62720,
+    "confidence": 0.986227
+  },
+  {
+    "text": ",",
+    "startMs": 62310,
+    "endMs": 62520,
+    "timestampMs": 63220,
+    "confidence": 0.452879
+  },
+  {
+    "text": " it",
+    "startMs": 62520,
+    "endMs": 62640,
+    "timestampMs": 63380,
+    "confidence": 0.978969
+  },
+  {
+    "text": " just",
+    "startMs": 62640,
+    "endMs": 62940,
+    "timestampMs": 63500,
+    "confidence": 0.996109
+  },
+  {
+    "text": " hires",
+    "startMs": 62940,
+    "endMs": 63360,
+    "timestampMs": 63780,
+    "confidence": 0.998096
+  },
+  {
+    "text": " a",
+    "startMs": 63360,
+    "endMs": 63450,
+    "timestampMs": 63780,
+    "confidence": 0.994856
+  },
+  {
+    "text": " friend",
+    "startMs": 63450,
+    "endMs": 63940,
+    "timestampMs": 64180,
+    "confidence": 0.998706
+  },
+  {
+    "text": " overseas",
+    "startMs": 63940,
+    "endMs": 64560,
+    "timestampMs": 64500,
+    "confidence": 0.948692
+  },
+  {
+    "text": " to",
+    "startMs": 64560,
+    "endMs": 64720,
+    "timestampMs": 65140,
+    "confidence": 0.981822
+  },
+  {
+    "text": " do",
+    "startMs": 64720,
+    "endMs": 64880,
+    "timestampMs": 65320,
+    "confidence": 0.993191
+  },
+  {
+    "text": " the",
+    "startMs": 64880,
+    "endMs": 65130,
+    "timestampMs": 65420,
+    "confidence": 0.965985
+  },
+  {
+    "text": " shopping",
+    "startMs": 65130,
+    "endMs": 65760,
+    "timestampMs": 65660,
+    "confidence": 0.998645
+  },
+  {
+    "text": " for",
+    "startMs": 65760,
+    "endMs": 66040,
+    "timestampMs": 65980,
+    "confidence": 0.991539
+  },
+  {
+    "text": " you",
+    "startMs": 66040,
+    "endMs": 67020,
+    "timestampMs": 66180,
+    "confidence": 0.915006
+  },
+  {
+    "text": ".",
+    "startMs": 67020,
+    "endMs": 67040,
+    "timestampMs": 66880,
+    "confidence": 0.971704
+  }
+]

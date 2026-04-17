@@ -6,6 +6,21 @@ import {
   staticFile,
 } from "remotion";
 import { Scene1Intro } from "./Scene1Intro";
+
+const SFX = {
+  woosh:  "sound-effects/mixkit-air-woosh-1489.wav",
+  zoom:   "sound-effects/mixkit-air-zoom-vacuum-2608.wav",
+  arrow:  "sound-effects/mixkit-arrow-whoosh-1491.wav",
+  bleeps: "sound-effects/mixkit-clock-countdown-bleeps-916.wav",
+  typing: "sound-effects/mixkit-keyboard-typing-1386.wav",
+  cheer:  "sound-effects/mixkit-small-group-cheer-and-applause-518.wav",
+};
+interface SfxProps { src: string; from: number; dur?: number; vol?: number; }
+const Sfx: React.FC<SfxProps> = ({ src, from, dur = 60, vol = 0.4 }) => (
+  <Sequence from={from} durationInFrames={dur}>
+    <Audio src={staticFile(src)} volume={vol} />
+  </Sequence>
+);
 import { Scene2Monolith } from "./Scene2Monolith";
 import { SceneTransition } from "./SceneTransition";
 import { Scene3Microservices } from "./Scene3Microservices";
@@ -26,7 +41,14 @@ export const MyComposition: React.FC = () => {
   return (
     <AbsoluteFill className="bg-white">
       <Audio src={staticFile("monolithic-vs-microservices/audio.wav")} />
-      
+
+      {/* ── Sound Effects ── */}
+      <Sfx src={SFX.woosh}  from={0}    dur={45}  vol={0.4} />  {/* Intro */}
+      <Sfx src={SFX.typing} from={276}  dur={90}  vol={0.35} /> {/* Monolith */}
+      <Sfx src={SFX.zoom}   from={1260} dur={45}  vol={0.4} />  {/* Transition */}
+      <Sfx src={SFX.arrow}  from={1332} dur={35}  vol={0.4} />  {/* Microservices */}
+      <Sfx src={SFX.cheer}  from={2480} dur={150} vol={0.5} />  {/* Conclusion */}
+
       <Sequence from={0} durationInFrames={276}>
         <Scene1Intro />
       </Sequence>

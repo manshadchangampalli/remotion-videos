@@ -5,6 +5,21 @@ import captionsData from "../../public/instagram-like/captions.json";
 import type { Caption } from "@remotion/captions";
 
 import { HookScene } from "./scenes/HookScene";
+
+const SFX = {
+  woosh:  "sound-effects/mixkit-air-woosh-1489.wav",
+  zoom:   "sound-effects/mixkit-air-zoom-vacuum-2608.wav",
+  arrow:  "sound-effects/mixkit-arrow-whoosh-1491.wav",
+  bleeps: "sound-effects/mixkit-clock-countdown-bleeps-916.wav",
+  typing: "sound-effects/mixkit-keyboard-typing-1386.wav",
+  cheer:  "sound-effects/mixkit-small-group-cheer-and-applause-518.wav",
+};
+interface SfxProps { src: string; from: number; dur?: number; vol?: number; }
+const Sfx: React.FC<SfxProps> = ({ src, from, dur = 60, vol = 0.4 }) => (
+  <Sequence from={from} durationInFrames={dur}>
+    <Audio src={staticFile(src)} volume={vol} />
+  </Sequence>
+);
 import { BottleneckScene } from "./scenes/BottleneckScene";
 import { LoadBalancerScene } from "./scenes/LoadBalancerScene";
 import { EventStreamScene } from "./scenes/EventStreamScene";
@@ -45,6 +60,15 @@ export const InstagramLikeComposition: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("instagram-like/Instagram-like.wav")} />
+
+      {/* ── Sound Effects ── */}
+      <Sfx src={SFX.woosh}  from={HOOK_START}         dur={45}  vol={0.4} />
+      <Sfx src={SFX.bleeps} from={BOTTLENECK_START}   dur={60}  vol={0.45} />
+      <Sfx src={SFX.arrow}  from={LOADBALANCER_START} dur={35}  vol={0.4} />
+      <Sfx src={SFX.typing} from={EVENTSTREAM_START}  dur={90}  vol={0.35} />
+      <Sfx src={SFX.zoom}   from={CACHE_START}        dur={45}  vol={0.4} />
+      <Sfx src={SFX.typing} from={DATABASE_START}     dur={90}  vol={0.35} />
+      <Sfx src={SFX.cheer}  from={BIGPICTURE_START}   dur={150} vol={0.5} />
 
       {/* Scene 1: Hook — Cristiano Ronaldo, 5M likes */}
       <Sequence from={HOOK_START} durationInFrames={HOOK_DUR} premountFor={30}>

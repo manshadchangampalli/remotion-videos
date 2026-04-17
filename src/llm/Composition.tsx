@@ -4,6 +4,21 @@ import "@remotion/google-fonts/Montserrat";
 import "@remotion/google-fonts/JetBrainsMono";
 import "@remotion/google-fonts/Inter";
 import { HookScene } from "./scenes/HookScene";
+
+const SFX = {
+  woosh:  "sound-effects/mixkit-air-woosh-1489.wav",
+  zoom:   "sound-effects/mixkit-air-zoom-vacuum-2608.wav",
+  arrow:  "sound-effects/mixkit-arrow-whoosh-1491.wav",
+  bleeps: "sound-effects/mixkit-clock-countdown-bleeps-916.wav",
+  typing: "sound-effects/mixkit-keyboard-typing-1386.wav",
+  cheer:  "sound-effects/mixkit-small-group-cheer-and-applause-518.wav",
+};
+interface SfxProps { src: string; from: number; dur?: number; vol?: number; }
+const Sfx: React.FC<SfxProps> = ({ src, from, dur = 60, vol = 0.4 }) => (
+  <Sequence from={from} durationInFrames={dur}>
+    <Audio src={staticFile(src)} volume={vol} />
+  </Sequence>
+);
 import { TokenScene } from "./scenes/TokenScene";
 import { VectorScene } from "./scenes/VectorScene";
 import { TransformerScene } from "./scenes/TransformerScene";
@@ -41,6 +56,14 @@ export const TOTAL_FRAMES = OUTRO_S + OUTRO_DUR; // 3795 — matches audio durat
 export const LLMComposition: React.FC = () => (
   <AbsoluteFill style={{ background: "#050505" }}>
     <Audio src={staticFile("llm-working/llm-working.wav")} />
+
+    {/* ── Sound Effects ── */}
+    <Sfx src={SFX.woosh}  from={HOOK_S}        dur={45}  vol={0.4} />
+    <Sfx src={SFX.typing} from={TOKEN_S}       dur={90}  vol={0.35} />
+    <Sfx src={SFX.zoom}   from={VECTOR_S}      dur={45}  vol={0.4} />
+    <Sfx src={SFX.typing} from={TRANSFORMER_S} dur={90}  vol={0.35} />
+    <Sfx src={SFX.arrow}  from={PREDICTION_S}  dur={35}  vol={0.4} />
+    <Sfx src={SFX.cheer}  from={OUTRO_S}       dur={75}  vol={0.5} />
 
     <Sequence from={HOOK_S} durationInFrames={HOOK_DUR}>
       <HookScene />

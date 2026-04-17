@@ -5,6 +5,21 @@ import captionsData from "../../public/postman/captions.json";
 import type { Caption } from "@remotion/captions";
 
 import { HookScene } from "./scenes/HookScene";
+
+const SFX = {
+  woosh:  "sound-effects/mixkit-air-woosh-1489.wav",
+  zoom:   "sound-effects/mixkit-air-zoom-vacuum-2608.wav",
+  arrow:  "sound-effects/mixkit-arrow-whoosh-1491.wav",
+  bleeps: "sound-effects/mixkit-clock-countdown-bleeps-916.wav",
+  typing: "sound-effects/mixkit-keyboard-typing-1386.wav",
+  cheer:  "sound-effects/mixkit-small-group-cheer-and-applause-518.wav",
+};
+interface SfxProps { src: string; from: number; dur?: number; vol?: number; }
+const Sfx: React.FC<SfxProps> = ({ src, from, dur = 60, vol = 0.4 }) => (
+  <Sequence from={from} durationInFrames={dur}>
+    <Audio src={staticFile(src)} volume={vol} />
+  </Sequence>
+);
 import { MysteryScene } from "./scenes/MysteryScene";
 import { PostmanScene } from "./scenes/PostmanScene";
 import { BrowserScene } from "./scenes/BrowserScene";
@@ -41,6 +56,14 @@ export const PostmanComposition: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("postman/postman.wav")} />
+
+      {/* ── Sound Effects ── */}
+      <Sfx src={SFX.woosh}  from={HOOK_START}      dur={45}  vol={0.4} />
+      <Sfx src={SFX.bleeps} from={MYSTERY_START}   dur={60}  vol={0.45} />
+      <Sfx src={SFX.typing} from={POSTMAN_START}   dur={90}  vol={0.35} />
+      <Sfx src={SFX.arrow}  from={BROWSER_START}   dur={35}  vol={0.4} />
+      <Sfx src={SFX.bleeps} from={PREFLIGHT_START} dur={60}  vol={0.45} />
+      <Sfx src={SFX.cheer}  from={OUTRO_START}     dur={150} vol={0.5} />
 
       {/* Hook: Postman 200OK vs browser CORS error */}
       <Sequence from={HOOK_START} durationInFrames={HOOK_DUR} premountFor={30}>

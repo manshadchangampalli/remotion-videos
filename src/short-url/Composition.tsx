@@ -5,6 +5,21 @@ import captionsListData from "../../public/short-url/captions.json";
 import type { Caption } from "@remotion/captions";
 
 import { HookScene } from "./scenes/HookScene";
+
+const SFX = {
+  woosh:  "sound-effects/mixkit-air-woosh-1489.wav",
+  zoom:   "sound-effects/mixkit-air-zoom-vacuum-2608.wav",
+  arrow:  "sound-effects/mixkit-arrow-whoosh-1491.wav",
+  bleeps: "sound-effects/mixkit-clock-countdown-bleeps-916.wav",
+  typing: "sound-effects/mixkit-keyboard-typing-1386.wav",
+  cheer:  "sound-effects/mixkit-small-group-cheer-and-applause-518.wav",
+};
+interface SfxProps { src: string; from: number; dur?: number; vol?: number; }
+const Sfx: React.FC<SfxProps> = ({ src, from, dur = 60, vol = 0.4 }) => (
+  <Sequence from={from} durationInFrames={dur}>
+    <Audio src={staticFile(src)} volume={vol} />
+  </Sequence>
+);
 import { Step1Scene } from "./scenes/Step1Scene";
 import { Step2Scene } from "./scenes/Step2Scene";
 import { Step3Scene } from "./scenes/Step3Scene";
@@ -45,6 +60,14 @@ export const MyComposition: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("short-url/short-url.wav")} />
+
+      {/* ── Sound Effects ── */}
+      <Sfx src={SFX.zoom}   from={HOOK_START}  dur={45}  vol={0.4} />
+      <Sfx src={SFX.arrow}  from={STEP1_START} dur={35}  vol={0.4} />
+      <Sfx src={SFX.zoom}   from={STEP2_START} dur={45}  vol={0.4} />
+      <Sfx src={SFX.typing} from={STEP3_START} dur={90}  vol={0.35} />
+      <Sfx src={SFX.arrow}  from={STEP4_START} dur={35}  vol={0.4} />
+      <Sfx src={SFX.cheer}  from={OUTRO_START} dur={150} vol={0.5} />
 
       {/* ── Hook: URL collapses → cursor clicks → dive into screen ── */}
       <Sequence from={HOOK_START} durationInFrames={HOOK_DUR} premountFor={30}>
