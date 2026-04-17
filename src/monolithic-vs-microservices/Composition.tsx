@@ -42,12 +42,24 @@ export const MyComposition: React.FC = () => {
     <AbsoluteFill className="bg-white">
       <Audio src={staticFile("monolithic-vs-microservices/audio.wav")} />
 
-      {/* ── Sound Effects ── */}
-      <Sfx src={SFX.woosh}  from={0}    dur={45}  vol={0.4} />  {/* Intro */}
-      <Sfx src={SFX.typing} from={276}  dur={90}  vol={0.35} /> {/* Monolith */}
-      <Sfx src={SFX.zoom}   from={1260} dur={45}  vol={0.4} />  {/* Transition */}
-      <Sfx src={SFX.arrow}  from={1332} dur={35}  vol={0.4} />  {/* Microservices */}
-      <Sfx src={SFX.cheer}  from={2480} dur={150} vol={0.5} />  {/* Conclusion */}
+      {/* ── Sound Effects ─────────────────────────────────────────────────
+          Scene 1 — Intro: reveal sweep
+          Scene 2 — Monolith building appears at f18, caption at f55; crash springs
+                    at f40 (within crash section, ~276+320+40≈636), war at f65
+          Transition — sharp impact as the wall of text slams
+          Scene 3 — Microservices: services appear at f20, gateway at f191, stats at f120
+          Scene 4 — Conclusion: cheer at the happy ending
+      */}
+      <Sfx src={SFX.woosh}  from={0}          dur={70}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={276 + 18}   dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={276 + 55}   dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}   from={276 + 80}   dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={1260}       dur={38}  vol={0.55} />
+      <Sfx src={SFX.zoom}   from={1332 + 20}  dur={38}  vol={0.50} />
+      <Sfx src={SFX.arrow}  from={1332 + 55}  dur={33}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={1332 + 120} dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}   from={1332 + 191} dur={38}  vol={0.50} />
+      <Sfx src={SFX.cheer}  from={2480}       dur={45}  vol={0.32} />
 
       <Sequence from={0} durationInFrames={276}>
         <Scene1Intro />

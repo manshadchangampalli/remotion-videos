@@ -57,13 +57,25 @@ export const LLMComposition: React.FC = () => (
   <AbsoluteFill style={{ background: "#050505" }}>
     <Audio src={staticFile("llm-working/llm-working.wav")} />
 
-    {/* ── Sound Effects ── */}
-    <Sfx src={SFX.woosh}  from={HOOK_S}        dur={45}  vol={0.4} />
-    <Sfx src={SFX.typing} from={TOKEN_S}       dur={90}  vol={0.35} />
-    <Sfx src={SFX.zoom}   from={VECTOR_S}      dur={45}  vol={0.4} />
-    <Sfx src={SFX.typing} from={TRANSFORMER_S} dur={90}  vol={0.35} />
-    <Sfx src={SFX.arrow}  from={PREDICTION_S}  dur={35}  vol={0.4} />
-    <Sfx src={SFX.cheer}  from={OUTRO_S}       dur={75}  vol={0.5} />
+    {/* ── Sound Effects ─────────────────────────────────────────────────
+        Hook — lines spring in at f12, f26, f40; chat bubble at f55; typing starts ~f95
+        Token — token scene opens: zoom (sharp tokenisation pop)
+        Vector — vector space: zoom (spatial transformation feel)
+        Transformer — attention computation: typing (machine processing)
+        Prediction — prediction slot springs at f55, success badge at f510
+        Outro — final reveal: sweep
+    */}
+    <Sfx src={SFX.zoom}   from={HOOK_S + 12}        dur={38}  vol={0.48} />
+    <Sfx src={SFX.zoom}   from={HOOK_S + 26}        dur={38}  vol={0.46} />
+    <Sfx src={SFX.zoom}   from={HOOK_S + 40}        dur={38}  vol={0.46} />
+    <Sfx src={SFX.woosh}  from={HOOK_S + 55}        dur={70}  vol={0.42} />
+    <Sfx src={SFX.typing} from={HOOK_S + 95}        dur={90}  vol={0.32} />
+    <Sfx src={SFX.zoom}   from={TOKEN_S}            dur={38}  vol={0.50} />
+    <Sfx src={SFX.zoom}   from={VECTOR_S}           dur={38}  vol={0.50} />
+    <Sfx src={SFX.typing} from={TRANSFORMER_S}      dur={90}  vol={0.35} />
+    <Sfx src={SFX.arrow}  from={PREDICTION_S + 55}  dur={33}  vol={0.42} />
+    <Sfx src={SFX.cheer}  from={PREDICTION_S + 510} dur={45}  vol={0.32} />
+    <Sfx src={SFX.woosh}  from={OUTRO_S}            dur={70}  vol={0.40} />
 
     <Sequence from={HOOK_S} durationInFrames={HOOK_DUR}>
       <HookScene />

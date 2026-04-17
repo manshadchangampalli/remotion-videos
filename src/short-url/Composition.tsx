@@ -61,13 +61,25 @@ export const MyComposition: React.FC = () => {
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("short-url/short-url.wav")} />
 
-      {/* ── Sound Effects ── */}
-      <Sfx src={SFX.zoom}   from={HOOK_START}  dur={45}  vol={0.4} />
-      <Sfx src={SFX.arrow}  from={STEP1_START} dur={35}  vol={0.4} />
-      <Sfx src={SFX.zoom}   from={STEP2_START} dur={45}  vol={0.4} />
-      <Sfx src={SFX.typing} from={STEP3_START} dur={90}  vol={0.35} />
-      <Sfx src={SFX.arrow}  from={STEP4_START} dur={35}  vol={0.4} />
-      <Sfx src={SFX.cheer}  from={OUTRO_START} dur={150} vol={0.5} />
+      {/* ── Sound Effects ─────────────────────────────────────────────────
+          Hook — URL collapses/shrinks: zoom, short URL pops at f70
+          Step 1 — Load Balancer: laptop springs at f8, LB springs at f82
+          Step 2 — Redis cache: scene opens zoom, Redis pops at f20, CACHE HIT! at f92
+          Step 3 — NoSQL DB: typing (key-value data), table springs at f148
+          Step 4 — 301 vs 302: cards compare, 301 at f50, 302 at f80
+          Outro — full architecture: sweep reveal
+      */}
+      <Sfx src={SFX.zoom}   from={HOOK_START}         dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={HOOK_START + 70}    dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}   from={STEP1_START + 8}    dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={STEP1_START + 82}   dur={38}  vol={0.52} />
+      <Sfx src={SFX.zoom}   from={STEP2_START + 20}   dur={38}  vol={0.50} />
+      <Sfx src={SFX.cheer}  from={STEP2_START + 92}   dur={45}  vol={0.32} />
+      <Sfx src={SFX.typing} from={STEP3_START}        dur={90}  vol={0.35} />
+      <Sfx src={SFX.zoom}   from={STEP3_START + 148}  dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={STEP4_START + 50}   dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}   from={STEP4_START + 80}   dur={38}  vol={0.48} />
+      <Sfx src={SFX.woosh}  from={OUTRO_START}        dur={70}  vol={0.42} />
 
       {/* ── Hook: URL collapses → cursor clicks → dive into screen ── */}
       <Sequence from={HOOK_START} durationInFrames={HOOK_DUR} premountFor={30}>

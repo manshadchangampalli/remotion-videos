@@ -57,13 +57,37 @@ export const PostmanComposition: React.FC = () => {
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("postman/postman.wav")} />
 
-      {/* ── Sound Effects ── */}
-      <Sfx src={SFX.woosh}  from={HOOK_START}      dur={45}  vol={0.4} />
-      <Sfx src={SFX.bleeps} from={MYSTERY_START}   dur={60}  vol={0.45} />
-      <Sfx src={SFX.typing} from={POSTMAN_START}   dur={90}  vol={0.35} />
-      <Sfx src={SFX.arrow}  from={BROWSER_START}   dur={35}  vol={0.4} />
-      <Sfx src={SFX.bleeps} from={PREFLIGHT_START} dur={60}  vol={0.45} />
-      <Sfx src={SFX.cheer}  from={OUTRO_START}     dur={150} vol={0.5} />
+      {/* ── Sound Effects ─────────────────────────────────────────────────
+          Hook: Postman badge pops, 200 OK pops, Browser badge, CORS slams, WHY?!
+      */}
+      <Sfx src={SFX.zoom}  from={HOOK_START + 30}  dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}  from={HOOK_START + 55}  dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}  from={HOOK_START + 120} dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}  from={HOOK_START + 155} dur={38}  vol={0.58} />
+      <Sfx src={SFX.zoom}  from={HOOK_START + 210} dur={38}  vol={0.50} />
+
+      {/* Mystery scene opens */}
+      <Sfx src={SFX.woosh} from={MYSTERY_START}    dur={70}  vol={0.42} />
+
+      {/* Postman scene: big reveal */}
+      <Sfx src={SFX.woosh} from={POSTMAN_START}    dur={70}  vol={0.45} />
+
+      {/* Browser scene: badge springs, shield pops, beam fires, explosion, preflight appears */}
+      <Sfx src={SFX.zoom}  from={BROWSER_START + 15}  dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}  from={BROWSER_START + 100} dur={38}  vol={0.48} />
+      <Sfx src={SFX.arrow} from={BROWSER_START + 180} dur={33}  vol={0.42} />
+      <Sfx src={SFX.zoom}  from={BROWSER_START + 230} dur={38}  vol={0.55} />
+      <Sfx src={SFX.woosh} from={BROWSER_START + 300} dur={70}  vol={0.42} />
+
+      {/* Preflight scene: chat bubble, YES, NO, CORS BOMB slams, bouncer reveals */}
+      <Sfx src={SFX.zoom}  from={PREFLIGHT_START + 10}  dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}  from={PREFLIGHT_START + 85}  dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}  from={PREFLIGHT_START + 110} dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}  from={PREFLIGHT_START + 150} dur={38}  vol={0.60} />
+      <Sfx src={SFX.woosh} from={PREFLIGHT_START + 200} dur={70}  vol={0.42} />
+
+      {/* Outro: brief cheer at the success reveal */}
+      <Sfx src={SFX.cheer} from={OUTRO_START}           dur={45}  vol={0.32} />
 
       {/* Hook: Postman 200OK vs browser CORS error */}
       <Sequence from={HOOK_START} durationInFrames={HOOK_DUR} premountFor={30}>

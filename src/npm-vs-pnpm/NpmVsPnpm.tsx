@@ -41,13 +41,29 @@ export const NpmVsPnpm: React.FC = () => {
       {/* Global narration track */}
       <Audio src={staticFile('npm-vs-pnpm/download.mp3')} />
 
-      {/* ── Sound Effects ── */}
-      <Sfx src={SFX.woosh}  from={0}    dur={45} vol={0.4} />  {/* Intro */}
-      <Sfx src={SFX.typing} from={165}  dur={90} vol={0.35} /> {/* npm install typing */}
-      <Sfx src={SFX.bleeps} from={425}  dur={60} vol={0.45} /> {/* Storage problem */}
-      <Sfx src={SFX.zoom}   from={720}  dur={45} vol={0.4} />  {/* PNPM intro */}
-      <Sfx src={SFX.arrow}  from={800}  dur={35} vol={0.4} />  {/* PNPM flow */}
-      <Sfx src={SFX.cheer}  from={1287} dur={150} vol={0.5} /> {/* Benefits/outro */}
+      {/* ── Sound Effects ─────────────────────────────────────────────────
+          Scene 0 — Intro: reveal sweep
+          Scene 1 — npm install: keyboard typing (actual install command)
+          Scene 2 — Storage problem: sharp discovery impact
+          Scene 3 — pnpm intro: reveal sweep
+          Scene 4 — pnpm flow: typing at T.TYPE1_START(15), MISS at T.MISS_SHOW(90),
+                    request fires at T.REQ_START(102), store fills at T.STORE_FILL(188),
+                    second project at T.PROJ2_APPEAR(272), cache HIT at T.HIT_SHOW(338),
+                    symlink at T.SYM2_DONE(380)
+          Scene 5 — Benefits: sweep reveal
+      */}
+      <Sfx src={SFX.woosh}  from={0}          dur={70}  vol={0.42} />
+      <Sfx src={SFX.typing} from={165}         dur={90}  vol={0.35} />
+      <Sfx src={SFX.zoom}   from={425}         dur={38}  vol={0.52} />
+      <Sfx src={SFX.woosh}  from={720}         dur={70}  vol={0.40} />
+      <Sfx src={SFX.typing} from={800 + 15}    dur={90}  vol={0.32} />
+      <Sfx src={SFX.zoom}   from={800 + 90}    dur={38}  vol={0.50} />
+      <Sfx src={SFX.arrow}  from={800 + 102}   dur={33}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={800 + 188}   dur={38}  vol={0.52} />
+      <Sfx src={SFX.woosh}  from={800 + 272}   dur={70}  vol={0.42} />
+      <Sfx src={SFX.cheer}  from={800 + 338}   dur={45}  vol={0.32} />
+      <Sfx src={SFX.arrow}  from={800 + 380}   dur={33}  vol={0.40} />
+      <Sfx src={SFX.woosh}  from={1287}        dur={70}  vol={0.42} />
 
       <Series>
         <Series.Sequence durationInFrames={165} premountFor={30}>

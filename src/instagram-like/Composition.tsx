@@ -61,14 +61,29 @@ export const InstagramLikeComposition: React.FC = () => {
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("instagram-like/Instagram-like.wav")} />
 
-      {/* ── Sound Effects ── */}
-      <Sfx src={SFX.woosh}  from={HOOK_START}         dur={45}  vol={0.4} />
-      <Sfx src={SFX.bleeps} from={BOTTLENECK_START}   dur={60}  vol={0.45} />
-      <Sfx src={SFX.arrow}  from={LOADBALANCER_START} dur={35}  vol={0.4} />
-      <Sfx src={SFX.typing} from={EVENTSTREAM_START}  dur={90}  vol={0.35} />
-      <Sfx src={SFX.zoom}   from={CACHE_START}        dur={45}  vol={0.4} />
-      <Sfx src={SFX.typing} from={DATABASE_START}     dur={90}  vol={0.35} />
-      <Sfx src={SFX.cheer}  from={BIGPICTURE_START}   dur={150} vol={0.5} />
+      {/* ── Sound Effects ─────────────────────────────────────────────────
+          Hook — Ronaldo post reveal: sweep
+          Bottleneck — overload badges pop at f200 and f250
+          LoadBalancer — LB node springs at f8, servers at f75, packets flow, badge at f120
+          EventStream — stream like a ledger: arrow (directional log entries)
+          Cache — stream springs at f8, worker at f30, cache node at f95, badge at f200
+          Database — stream springs at f8, clerk at f25, DB appears at f255, badge at f350
+          BigPicture — brief cheer for the full architecture reveal
+      */}
+      <Sfx src={SFX.woosh}  from={HOOK_START}                      dur={70}  vol={0.42} />
+      <Sfx src={SFX.bleeps} from={BOTTLENECK_START}                dur={60}  vol={0.18} />
+      <Sfx src={SFX.zoom}   from={BOTTLENECK_START + 200}          dur={38}  vol={0.52} />
+      <Sfx src={SFX.zoom}   from={BOTTLENECK_START + 250}          dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={LOADBALANCER_START + 8}          dur={38}  vol={0.50} />
+      <Sfx src={SFX.arrow}  from={LOADBALANCER_START + 75}         dur={33}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={LOADBALANCER_START + 120}        dur={38}  vol={0.48} />
+      <Sfx src={SFX.arrow}  from={EVENTSTREAM_START}               dur={33}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={CACHE_START + 8}                 dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={CACHE_START + 95}                dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}   from={CACHE_START + 200}               dur={38}  vol={0.48} />
+      <Sfx src={SFX.zoom}   from={DATABASE_START + 25}             dur={38}  vol={0.50} />
+      <Sfx src={SFX.zoom}   from={DATABASE_START + 255}            dur={38}  vol={0.50} />
+      <Sfx src={SFX.cheer}  from={BIGPICTURE_START}                dur={45}  vol={0.32} />
 
       {/* Scene 1: Hook — Cristiano Ronaldo, 5M likes */}
       <Sequence from={HOOK_START} durationInFrames={HOOK_DUR} premountFor={30}>

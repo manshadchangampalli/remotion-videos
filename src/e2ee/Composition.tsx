@@ -33,13 +33,28 @@ export const E2EEComposition: React.FC = () => {
     <AbsoluteFill style={{ background: "#050A0F" }}>
       <Audio src={staticFile("whatsapp/whatsapp-encryption.wav")} />
 
-      {/* ── Sound Effects ── */}
-      <Sfx src={SFX.woosh}  from={0}   dur={45}  vol={0.4} />  {/* Hook intro */}
-      <Sfx src={SFX.zoom}   from={200} dur={45}  vol={0.4} />  {/* Reframe */}
-      <Sfx src={SFX.typing} from={400} dur={90}  vol={0.35} /> {/* Encryption */}
-      <Sfx src={SFX.bleeps} from={600} dur={60}  vol={0.45} /> {/* Interception attempt */}
-      <Sfx src={SFX.cheer}  from={800} dur={120} vol={0.45} /> {/* Unlock success */}
-      <Sfx src={SFX.cheer}  from={1000} dur={150} vol={0.5} /> {/* Outro */}
+      {/* ── Sound Effects ─────────────────────────────────────────────────
+          Scene 1 — Hook reveal: sweep
+          Scene 2 — Reframe: sweep
+          Scene 3 — Encryption: bubble launches, key rises, padlock slams
+          Scene 4 — Interception: scanning bleeps, attempts spring in, arrow
+          Scene 5 — Unlock: vault sweeps in, key springs, particles fire, success
+          Scene 6 — Outro: sweep
+      */}
+      <Sfx src={SFX.woosh}  from={0}         dur={70}  vol={0.42} />
+      <Sfx src={SFX.woosh}  from={200}        dur={70}  vol={0.38} />
+      <Sfx src={SFX.zoom}   from={400 + 10}   dur={38}  vol={0.50} />
+      <Sfx src={SFX.woosh}  from={400 + 62}   dur={70}  vol={0.40} />
+      <Sfx src={SFX.zoom}   from={400 + 162}  dur={38}  vol={0.52} />
+      <Sfx src={SFX.bleeps} from={600}        dur={60}  vol={0.18} />
+      <Sfx src={SFX.zoom}   from={600 + 42}   dur={38}  vol={0.52} />
+      <Sfx src={SFX.arrow}  from={600 + 102}  dur={33}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={600 + 122}  dur={38}  vol={0.50} />
+      <Sfx src={SFX.woosh}  from={800 + 30}   dur={70}  vol={0.42} />
+      <Sfx src={SFX.zoom}   from={800 + 42}   dur={38}  vol={0.52} />
+      <Sfx src={SFX.arrow}  from={800 + 102}  dur={33}  vol={0.42} />
+      <Sfx src={SFX.cheer}  from={800 + 148}  dur={45}  vol={0.32} />
+      <Sfx src={SFX.woosh}  from={1000}       dur={70}  vol={0.38} />
 
       <Sequence from={0} durationInFrames={SCENE_DUR}>
         <Scene1Hook />
