@@ -47,7 +47,7 @@ const CaptionPage: React.FC<{ page: TikTokPage }> = ({ page }) => {
   const durationMs = page.durationMs;
   const progress = durationMs > 0 ? currentTimeMs / durationMs : 0;
 
-  const opacity = interpolate(progress, [0, 0.05, 0.95, 1], [0, 1, 1, 0], {
+  const opacity = interpolate(progress, [0, 0.05, 0.95, 1], [0, 0.78, 0.78, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -67,14 +67,14 @@ const CaptionPage: React.FC<{ page: TikTokPage }> = ({ page }) => {
     >
       <div
         style={{
-          background: "rgba(255,255,255,0.65)",
-          backdropFilter: "blur(24px) saturate(180%)",
-          WebkitBackdropFilter: "blur(24px) saturate(180%)",
-          padding: "28px 56px",
-          borderRadius: 44,
-          border: "1px solid rgba(255,255,255,0.4)",
+          background: "rgba(255,255,255,0.28)",
+          backdropFilter: "blur(14px) saturate(160%)",
+          WebkitBackdropFilter: "blur(14px) saturate(160%)",
+          padding: "22px 48px",
+          borderRadius: 40,
+          border: "1px solid rgba(255,255,255,0.25)",
           maxWidth: 960,
-          boxShadow: "0 12px 40px rgba(0,0,0,0.12)",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
         }}
       >
         <p

@@ -161,7 +161,7 @@ export const HookScene: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top: 0,
+          top: 120,
           left: 0,
           right: 0,
           transform: `translateY(${postY}px)`,

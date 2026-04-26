@@ -188,7 +188,7 @@ export const Scene1Intro: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top: 100,
+          top: 200,
           display: "flex",
           gap: 32,
           zIndex: 10,

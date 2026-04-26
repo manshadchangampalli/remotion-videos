@@ -142,7 +142,7 @@ export const Scene2StorageProblem: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 80,
+          top: 200,
           left: 0,
           right: 0,
           textAlign: 'center',
@@ -160,7 +160,7 @@ export const Scene2StorageProblem: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 180,
+          top: 300,
           left: 60,
           right: 60,
           display: 'flex',

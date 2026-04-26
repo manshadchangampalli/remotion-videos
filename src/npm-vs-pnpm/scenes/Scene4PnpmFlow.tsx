@@ -289,7 +289,7 @@ export const Scene4PnpmFlow: React.FC = () => {
     <AbsoluteFill style={{ background: BG_GRADIENT, opacity: sceneOp }}>
       {/* Header */}
       <div style={{
-        position: 'absolute', top: 50, left: 0, right: 0,
+        position: 'absolute', top: 170, left: 0, right: 0,
         textAlign: 'center', fontFamily: 'system-ui, sans-serif',
         fontSize: 42, fontWeight: 900, color: PNPM,
       }}>
@@ -298,12 +298,12 @@ export const Scene4PnpmFlow: React.FC = () => {
 
       {/* Column labels */}
       <div style={{
-        position: 'absolute', top: 110, left: PROJ_CX - 120, width: 240,
+        position: 'absolute', top: 230, left: PROJ_CX - 120, width: 240,
         textAlign: 'center', color: MONITOR_COLORS.TEXT_DIM, fontSize: 16, fontFamily: 'system-ui, sans-serif',
         fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2,
       }}>Projects</div>
       <div style={{
-        position: 'absolute', top: 110, left: RIGHT_CX - 120, width: 240,
+        position: 'absolute', top: 230, left: RIGHT_CX - 120, width: 240,
         textAlign: 'center', color: PNPM, fontSize: 16, fontFamily: 'system-ui, sans-serif',
         fontWeight: 800, textTransform: 'uppercase', letterSpacing: 2,
       }}>pnpm store</div>

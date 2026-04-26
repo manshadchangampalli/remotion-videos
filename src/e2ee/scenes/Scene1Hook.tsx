@@ -113,7 +113,7 @@ export const Scene1Hook: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top: 175,
+          top: 240,
           left: 0,
           right: 0,
           display: "flex",

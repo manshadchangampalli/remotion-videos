@@ -53,7 +53,7 @@ export const Scene5Benefits: React.FC = () => {
     <AbsoluteFill style={{ background: BG_GRADIENT, opacity: sceneOp }}>
       {/* Header */}
       <div style={{
-        position: 'absolute', top: 60, left: 0, right: 0,
+        position: 'absolute', top: 180, left: 0, right: 0,
         textAlign: 'center', fontFamily: 'system-ui, sans-serif',
         fontSize: 42, fontWeight: 900, color: TEXT, letterSpacing: -1,
       }}>
@@ -62,7 +62,7 @@ export const Scene5Benefits: React.FC = () => {
 
       {/* Comparison Stack */}
       <div style={{
-        position: 'absolute', top: 150, left: 60, right: 60,
+        position: 'absolute', top: 270, left: 60, right: 60,
         display: 'flex', flexDirection: 'column', gap: 30,
       }}>
         {/* npm card */}
@@ -148,7 +148,7 @@ export const Scene5Benefits: React.FC = () => {
 
       {/* Benefits List */}
       <div style={{
-        position: 'absolute', bottom: 60, left: 60, right: 60,
+        position: 'absolute', bottom: 280, left: 60, right: 60,
         display: 'flex', flexDirection: 'column', gap: 16,
       }}>
         {BENEFITS.map(({ icon, title, desc }, i) => (

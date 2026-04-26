@@ -93,7 +93,7 @@ export const Scene1NpmInstall: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 60,
+          top: 180,
           left: 0,
           right: 0,
           display: 'flex',
@@ -326,7 +326,7 @@ export const Scene1NpmInstall: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 240,
+          top: 320,
           left: CX - 100,
           display: 'flex',
           flexDirection: 'column',

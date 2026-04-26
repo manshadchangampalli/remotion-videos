@@ -1,0 +1,1255 @@
+[
+  {
+    "text": " You",
+    "startMs": 0,
+    "endMs": 460,
+    "timestampMs": 230,
+    "confidence": 0.5979455709457397
+  },
+  {
+    "text": " drop",
+    "startMs": 460,
+    "endMs": 840,
+    "timestampMs": 650,
+    "confidence": 0.9810429811477661
+  },
+  {
+    "text": " your",
+    "startMs": 840,
+    "endMs": 1060,
+    "timestampMs": 950,
+    "confidence": 0.9913996458053589
+  },
+  {
+    "text": " clothes",
+    "startMs": 1060,
+    "endMs": 1440,
+    "timestampMs": 1250,
+    "confidence": 0.6690003871917725
+  },
+  {
+    "text": " into",
+    "startMs": 1440,
+    "endMs": 1780,
+    "timestampMs": 1610,
+    "confidence": 0.9579877257347107
+  },
+  {
+    "text": " a",
+    "startMs": 1780,
+    "endMs": 1940,
+    "timestampMs": 1860,
+    "confidence": 0.9855130314826965
+  },
+  {
+    "text": " Decathlon",
+    "startMs": 1940,
+    "endMs": 2460,
+    "timestampMs": 2200,
+    "confidence": 0.8428530693054199
+  },
+  {
+    "text": " checkout",
+    "startMs": 2460,
+    "endMs": 2800,
+    "timestampMs": 2630,
+    "confidence": 0.5486658215522766
+  },
+  {
+    "text": " bin",
+    "startMs": 2800,
+    "endMs": 3180,
+    "timestampMs": 2990,
+    "confidence": 0.9978775978088379
+  },
+  {
+    "text": " and",
+    "startMs": 3180,
+    "endMs": 3600,
+    "timestampMs": 3390,
+    "confidence": 0.6564088463783264
+  },
+  {
+    "text": " it",
+    "startMs": 3600,
+    "endMs": 3720,
+    "timestampMs": 3660,
+    "confidence": 0.9815794229507446
+  },
+  {
+    "text": " instantly",
+    "startMs": 3720,
+    "endMs": 4300,
+    "timestampMs": 4010,
+    "confidence": 0.9970544576644897
+  },
+  {
+    "text": " calculates",
+    "startMs": 4300,
+    "endMs": 4980,
+    "timestampMs": 4640,
+    "confidence": 0.9952974915504456
+  },
+  {
+    "text": " your",
+    "startMs": 4980,
+    "endMs": 5080,
+    "timestampMs": 5030,
+    "confidence": 0.9235106110572815
+  },
+  {
+    "text": " total.",
+    "startMs": 5080,
+    "endMs": 5320,
+    "timestampMs": 5200,
+    "confidence": 0.9943739175796509
+  },
+  {
+    "text": " No",
+    "startMs": 5980,
+    "endMs": 6200,
+    "timestampMs": 6090,
+    "confidence": 0.9683484435081482
+  },
+  {
+    "text": " barcodes.",
+    "startMs": 6200,
+    "endMs": 6680,
+    "timestampMs": 6440,
+    "confidence": 0.9589577913284302
+  },
+  {
+    "text": " How?",
+    "startMs": 7240,
+    "endMs": 7520,
+    "timestampMs": 7380,
+    "confidence": 0.9765303730964661
+  },
+  {
+    "text": " It",
+    "startMs": 8200,
+    "endMs": 8400,
+    "timestampMs": 8300,
+    "confidence": 0.9891459941864014
+  },
+  {
+    "text": " uses",
+    "startMs": 8400,
+    "endMs": 8740,
+    "timestampMs": 8570,
+    "confidence": 0.9967471361160278
+  },
+  {
+    "text": " radio",
+    "startMs": 8740,
+    "endMs": 9240,
+    "timestampMs": 8990,
+    "confidence": 0.9377835392951965
+  },
+  {
+    "text": "-frequency",
+    "startMs": 9240,
+    "endMs": 9760,
+    "timestampMs": 9500,
+    "confidence": 0.7266120910644531
+  },
+  {
+    "text": " identification.",
+    "startMs": 9760,
+    "endMs": 10440,
+    "timestampMs": 10100,
+    "confidence": 0.9952825903892517
+  },
+  {
+    "text": " If",
+    "startMs": 11360,
+    "endMs": 11800,
+    "timestampMs": 11580,
+    "confidence": 0.9950650334358215
+  },
+  {
+    "text": " you",
+    "startMs": 11800,
+    "endMs": 11960,
+    "timestampMs": 11880,
+    "confidence": 0.999086856842041
+  },
+  {
+    "text": " peel",
+    "startMs": 11960,
+    "endMs": 12280,
+    "timestampMs": 12120,
+    "confidence": 0.9873223900794983
+  },
+  {
+    "text": " back",
+    "startMs": 12280,
+    "endMs": 12500,
+    "timestampMs": 12390,
+    "confidence": 0.9827386736869812
+  },
+  {
+    "text": " the",
+    "startMs": 12500,
+    "endMs": 12680,
+    "timestampMs": 12590,
+    "confidence": 0.9852971434593201
+  },
+  {
+    "text": " layers",
+    "startMs": 12680,
+    "endMs": 12960,
+    "timestampMs": 12820,
+    "confidence": 0.9974682331085205
+  },
+  {
+    "text": " of",
+    "startMs": 12960,
+    "endMs": 13120,
+    "timestampMs": 13040,
+    "confidence": 0.9948557615280151
+  },
+  {
+    "text": " a",
+    "startMs": 13120,
+    "endMs": 13220,
+    "timestampMs": 13170,
+    "confidence": 0.9369403719902039
+  },
+  {
+    "text": " Decathlon",
+    "startMs": 13220,
+    "endMs": 13640,
+    "timestampMs": 13430,
+    "confidence": 0.9662743508815765
+  },
+  {
+    "text": " price",
+    "startMs": 13640,
+    "endMs": 14000,
+    "timestampMs": 13820,
+    "confidence": 0.9154223203659058
+  },
+  {
+    "text": " tag,",
+    "startMs": 14000,
+    "endMs": 14300,
+    "timestampMs": 14150,
+    "confidence": 0.9978844523429871
+  },
+  {
+    "text": " you",
+    "startMs": 14620,
+    "endMs": 14800,
+    "timestampMs": 14710,
+    "confidence": 0.994117021560669
+  },
+  {
+    "text": " won't",
+    "startMs": 14800,
+    "endMs": 14960,
+    "timestampMs": 14880,
+    "confidence": 0.9935716688632965
+  },
+  {
+    "text": " just",
+    "startMs": 14960,
+    "endMs": 15180,
+    "timestampMs": 15070,
+    "confidence": 0.9833696484565735
+  },
+  {
+    "text": " find",
+    "startMs": 15180,
+    "endMs": 15440,
+    "timestampMs": 15310,
+    "confidence": 0.9948928356170654
+  },
+  {
+    "text": " paper.",
+    "startMs": 15440,
+    "endMs": 15800,
+    "timestampMs": 15620,
+    "confidence": 0.9966878294944763
+  },
+  {
+    "text": " You'll",
+    "startMs": 16240,
+    "endMs": 16500,
+    "timestampMs": 16370,
+    "confidence": 0.9843491911888123
+  },
+  {
+    "text": " find",
+    "startMs": 16500,
+    "endMs": 16680,
+    "timestampMs": 16590,
+    "confidence": 0.997016429901123
+  },
+  {
+    "text": " a",
+    "startMs": 16680,
+    "endMs": 16900,
+    "timestampMs": 16790,
+    "confidence": 0.990656316280365
+  },
+  {
+    "text": " microscopic",
+    "startMs": 16900,
+    "endMs": 17540,
+    "timestampMs": 17220,
+    "confidence": 0.9942837357521057
+  },
+  {
+    "text": " computer",
+    "startMs": 17540,
+    "endMs": 18080,
+    "timestampMs": 17810,
+    "confidence": 0.99603670835495
+  },
+  {
+    "text": " chip",
+    "startMs": 18080,
+    "endMs": 18420,
+    "timestampMs": 18250,
+    "confidence": 0.9975048899650574
+  },
+  {
+    "text": " attached",
+    "startMs": 18420,
+    "endMs": 18760,
+    "timestampMs": 18590,
+    "confidence": 0.96357661485672
+  },
+  {
+    "text": " to",
+    "startMs": 18760,
+    "endMs": 19120,
+    "timestampMs": 18940,
+    "confidence": 0.9983453750610352
+  },
+  {
+    "text": " a",
+    "startMs": 19120,
+    "endMs": 19240,
+    "timestampMs": 19180,
+    "confidence": 0.9916658997535706
+  },
+  {
+    "text": " flat,",
+    "startMs": 19240,
+    "endMs": 19540,
+    "timestampMs": 19390,
+    "confidence": 0.9979335069656372
+  },
+  {
+    "text": " squiggly,",
+    "startMs": 19740,
+    "endMs": 20280,
+    "timestampMs": 20010,
+    "confidence": 0.9896703064441681
+  },
+  {
+    "text": " aluminum",
+    "startMs": 20460,
+    "endMs": 20900,
+    "timestampMs": 20680,
+    "confidence": 0.9706298112869263
+  },
+  {
+    "text": " antenna.",
+    "startMs": 20900,
+    "endMs": 21300,
+    "timestampMs": 21100,
+    "confidence": 0.9978306889533997
+  },
+  {
+    "text": " Notice,",
+    "startMs": 22200,
+    "endMs": 22800,
+    "timestampMs": 22500,
+    "confidence": 0.995600700378418
+  },
+  {
+    "text": " there",
+    "startMs": 23120,
+    "endMs": 23260,
+    "timestampMs": 23190,
+    "confidence": 0.9968543648719788
+  },
+  {
+    "text": " is",
+    "startMs": 23260,
+    "endMs": 23480,
+    "timestampMs": 23370,
+    "confidence": 0.9641274809837341
+  },
+  {
+    "text": " no",
+    "startMs": 23480,
+    "endMs": 23680,
+    "timestampMs": 23580,
+    "confidence": 0.9970255494117737
+  },
+  {
+    "text": " battery.",
+    "startMs": 23680,
+    "endMs": 24040,
+    "timestampMs": 23860,
+    "confidence": 0.9987866282463074
+  },
+  {
+    "text": " So",
+    "startMs": 24640,
+    "endMs": 24900,
+    "timestampMs": 24770,
+    "confidence": 0.9875981211662292
+  },
+  {
+    "text": " how",
+    "startMs": 24900,
+    "endMs": 25280,
+    "timestampMs": 25090,
+    "confidence": 0.5393339991569519
+  },
+  {
+    "text": " does",
+    "startMs": 25280,
+    "endMs": 25380,
+    "timestampMs": 25330,
+    "confidence": 0.9956811666488647
+  },
+  {
+    "text": " it",
+    "startMs": 25380,
+    "endMs": 25520,
+    "timestampMs": 25450,
+    "confidence": 0.9898906946182251
+  },
+  {
+    "text": " turn",
+    "startMs": 25520,
+    "endMs": 25720,
+    "timestampMs": 25620,
+    "confidence": 0.9980564117431641
+  },
+  {
+    "text": " on?",
+    "startMs": 25720,
+    "endMs": 25960,
+    "timestampMs": 25840,
+    "confidence": 0.997516393661499
+  },
+  {
+    "text": " When",
+    "startMs": 26790,
+    "endMs": 27140,
+    "timestampMs": 26965,
+    "confidence": 0.5985442996025085
+  },
+  {
+    "text": " you",
+    "startMs": 27140,
+    "endMs": 27280,
+    "timestampMs": 27210,
+    "confidence": 0.9970414042472839
+  },
+  {
+    "text": " drop",
+    "startMs": 27280,
+    "endMs": 27540,
+    "timestampMs": 27410,
+    "confidence": 0.9902570247650146
+  },
+  {
+    "text": " your",
+    "startMs": 27540,
+    "endMs": 27720,
+    "timestampMs": 27630,
+    "confidence": 0.9907920360565186
+  },
+  {
+    "text": " clothes",
+    "startMs": 27720,
+    "endMs": 28000,
+    "timestampMs": 27860,
+    "confidence": 0.8934367299079895
+  },
+  {
+    "text": " into",
+    "startMs": 28000,
+    "endMs": 28260,
+    "timestampMs": 28130,
+    "confidence": 0.9683420658111572
+  },
+  {
+    "text": " the",
+    "startMs": 28260,
+    "endMs": 28380,
+    "timestampMs": 28320,
+    "confidence": 0.983014702796936
+  },
+  {
+    "text": " bin,",
+    "startMs": 28380,
+    "endMs": 28640,
+    "timestampMs": 28510,
+    "confidence": 0.9986847043037415
+  },
+  {
+    "text": " an",
+    "startMs": 28940,
+    "endMs": 29020,
+    "timestampMs": 28980,
+    "confidence": 0.9827630519866943
+  },
+  {
+    "text": " RFID",
+    "startMs": 29020,
+    "endMs": 29820,
+    "timestampMs": 29420,
+    "confidence": 0.9956560432910919
+  },
+  {
+    "text": " reader",
+    "startMs": 29820,
+    "endMs": 30200,
+    "timestampMs": 30010,
+    "confidence": 0.9625511169433594
+  },
+  {
+    "text": " hidden",
+    "startMs": 30200,
+    "endMs": 30500,
+    "timestampMs": 30350,
+    "confidence": 0.9911447167396545
+  },
+  {
+    "text": " inside",
+    "startMs": 30500,
+    "endMs": 30980,
+    "timestampMs": 30740,
+    "confidence": 0.9932844638824463
+  },
+  {
+    "text": " the",
+    "startMs": 30980,
+    "endMs": 31180,
+    "timestampMs": 31080,
+    "confidence": 0.959581732749939
+  },
+  {
+    "text": " walls",
+    "startMs": 31180,
+    "endMs": 31420,
+    "timestampMs": 31300,
+    "confidence": 0.8623393774032593
+  },
+  {
+    "text": " blasts",
+    "startMs": 31420,
+    "endMs": 32300,
+    "timestampMs": 31860,
+    "confidence": 0.890750527381897
+  },
+  {
+    "text": " an",
+    "startMs": 32300,
+    "endMs": 32400,
+    "timestampMs": 32350,
+    "confidence": 0.9838326573371887
+  },
+  {
+    "text": " invisible",
+    "startMs": 32400,
+    "endMs": 32800,
+    "timestampMs": 32600,
+    "confidence": 0.9948086738586426
+  },
+  {
+    "text": " radio",
+    "startMs": 32800,
+    "endMs": 33400,
+    "timestampMs": 33100,
+    "confidence": 0.988135814666748
+  },
+  {
+    "text": " wave.",
+    "startMs": 33400,
+    "endMs": 33680,
+    "timestampMs": 33540,
+    "confidence": 0.9743764996528625
+  },
+  {
+    "text": " Through",
+    "startMs": 34300,
+    "endMs": 34760,
+    "timestampMs": 34530,
+    "confidence": 0.9515939354896545
+  },
+  {
+    "text": " a",
+    "startMs": 34760,
+    "endMs": 34940,
+    "timestampMs": 34850,
+    "confidence": 0.9973394274711609
+  },
+  {
+    "text": " process",
+    "startMs": 34940,
+    "endMs": 35440,
+    "timestampMs": 35190,
+    "confidence": 0.9961376786231995
+  },
+  {
+    "text": " called",
+    "startMs": 35440,
+    "endMs": 36000,
+    "timestampMs": 35720,
+    "confidence": 0.9972779154777527
+  },
+  {
+    "text": " electromagnetic",
+    "startMs": 36000,
+    "endMs": 37300,
+    "timestampMs": 36650,
+    "confidence": 0.3635231852531433
+  },
+  {
+    "text": " induction,",
+    "startMs": 37300,
+    "endMs": 38760,
+    "timestampMs": 38030,
+    "confidence": 0.9985474944114685
+  },
+  {
+    "text": " the",
+    "startMs": 39400,
+    "endMs": 39520,
+    "timestampMs": 39460,
+    "confidence": 0.9948634505271912
+  },
+  {
+    "text": " aluminum",
+    "startMs": 39520,
+    "endMs": 39860,
+    "timestampMs": 39690,
+    "confidence": 0.7151781916618347
+  },
+  {
+    "text": " antenna",
+    "startMs": 39860,
+    "endMs": 40280,
+    "timestampMs": 40070,
+    "confidence": 0.9973328113555908
+  },
+  {
+    "text": " catches",
+    "startMs": 40280,
+    "endMs": 40920,
+    "timestampMs": 40600,
+    "confidence": 0.9909838438034058
+  },
+  {
+    "text": " that",
+    "startMs": 40920,
+    "endMs": 41160,
+    "timestampMs": 41040,
+    "confidence": 0.972743034362793
+  },
+  {
+    "text": " wave",
+    "startMs": 41160,
+    "endMs": 41420,
+    "timestampMs": 41290,
+    "confidence": 0.9867613315582275
+  },
+  {
+    "text": " and",
+    "startMs": 41420,
+    "endMs": 41820,
+    "timestampMs": 41620,
+    "confidence": 0.9104546904563904
+  },
+  {
+    "text": " physically",
+    "startMs": 41820,
+    "endMs": 42120,
+    "timestampMs": 41970,
+    "confidence": 0.9798322916030884
+  },
+  {
+    "text": " converts",
+    "startMs": 42120,
+    "endMs": 42620,
+    "timestampMs": 42370,
+    "confidence": 0.9961088299751282
+  },
+  {
+    "text": " it",
+    "startMs": 42620,
+    "endMs": 42820,
+    "timestampMs": 42720,
+    "confidence": 0.9900611639022827
+  },
+  {
+    "text": " into",
+    "startMs": 42820,
+    "endMs": 43060,
+    "timestampMs": 42940,
+    "confidence": 0.9876562356948853
+  },
+  {
+    "text": " a",
+    "startMs": 43060,
+    "endMs": 43300,
+    "timestampMs": 43180,
+    "confidence": 0.9907032251358032
+  },
+  {
+    "text": " tiny",
+    "startMs": 43300,
+    "endMs": 43680,
+    "timestampMs": 43490,
+    "confidence": 0.996597945690155
+  },
+  {
+    "text": " spark",
+    "startMs": 43680,
+    "endMs": 44180,
+    "timestampMs": 43930,
+    "confidence": 0.9981229901313782
+  },
+  {
+    "text": " of",
+    "startMs": 44180,
+    "endMs": 44460,
+    "timestampMs": 44320,
+    "confidence": 0.9973635077476501
+  },
+  {
+    "text": " electricity.",
+    "startMs": 44460,
+    "endMs": 44880,
+    "timestampMs": 44670,
+    "confidence": 0.9941463470458984
+  },
+  {
+    "text": " That",
+    "startMs": 45740,
+    "endMs": 46180,
+    "timestampMs": 45960,
+    "confidence": 0.9822428226470947
+  },
+  {
+    "text": " brief",
+    "startMs": 46180,
+    "endMs": 46520,
+    "timestampMs": 46350,
+    "confidence": 0.9914918541908264
+  },
+  {
+    "text": " spark",
+    "startMs": 46520,
+    "endMs": 46980,
+    "timestampMs": 46750,
+    "confidence": 0.9158324003219604
+  },
+  {
+    "text": " wakes",
+    "startMs": 46980,
+    "endMs": 47480,
+    "timestampMs": 47230,
+    "confidence": 0.9803065061569214
+  },
+  {
+    "text": " up",
+    "startMs": 47480,
+    "endMs": 47640,
+    "timestampMs": 47560,
+    "confidence": 0.9922875165939331
+  },
+  {
+    "text": " the",
+    "startMs": 47640,
+    "endMs": 47760,
+    "timestampMs": 47700,
+    "confidence": 0.9971333742141724
+  },
+  {
+    "text": " microchip.",
+    "startMs": 47760,
+    "endMs": 48260,
+    "timestampMs": 48010,
+    "confidence": 0.9882397452990214
+  },
+  {
+    "text": " The",
+    "startMs": 48820,
+    "endMs": 48980,
+    "timestampMs": 48900,
+    "confidence": 0.9757199883460999
+  },
+  {
+    "text": " chip",
+    "startMs": 48980,
+    "endMs": 49220,
+    "timestampMs": 49100,
+    "confidence": 0.9952728152275085
+  },
+  {
+    "text": " instantly",
+    "startMs": 49220,
+    "endMs": 49840,
+    "timestampMs": 49530,
+    "confidence": 0.9904424548149109
+  },
+  {
+    "text": " uses",
+    "startMs": 49840,
+    "endMs": 50220,
+    "timestampMs": 50030,
+    "confidence": 0.9948141574859619
+  },
+  {
+    "text": " the",
+    "startMs": 50220,
+    "endMs": 50480,
+    "timestampMs": 50350,
+    "confidence": 0.6476712822914124
+  },
+  {
+    "text": " exact",
+    "startMs": 50480,
+    "endMs": 50940,
+    "timestampMs": 50710,
+    "confidence": 0.9944730401039124
+  },
+  {
+    "text": " same",
+    "startMs": 50940,
+    "endMs": 51220,
+    "timestampMs": 51080,
+    "confidence": 0.9983829259872437
+  },
+  {
+    "text": " energy",
+    "startMs": 51220,
+    "endMs": 51580,
+    "timestampMs": 51400,
+    "confidence": 0.9978446960449219
+  },
+  {
+    "text": " to",
+    "startMs": 51580,
+    "endMs": 51900,
+    "timestampMs": 51740,
+    "confidence": 0.9951711297035217
+  },
+  {
+    "text": " bounce",
+    "startMs": 51900,
+    "endMs": 52240,
+    "timestampMs": 52070,
+    "confidence": 0.9946225881576538
+  },
+  {
+    "text": " back",
+    "startMs": 52240,
+    "endMs": 52560,
+    "timestampMs": 52400,
+    "confidence": 0.9942217469215393
+  },
+  {
+    "text": " its",
+    "startMs": 52560,
+    "endMs": 52800,
+    "timestampMs": 52680,
+    "confidence": 0.9411334991455078
+  },
+  {
+    "text": " electronic",
+    "startMs": 52800,
+    "endMs": 53460,
+    "timestampMs": 53130,
+    "confidence": 0.9888197779655457
+  },
+  {
+    "text": " product",
+    "startMs": 53460,
+    "endMs": 54060,
+    "timestampMs": 53760,
+    "confidence": 0.9947691559791565
+  },
+  {
+    "text": " code.",
+    "startMs": 54060,
+    "endMs": 54500,
+    "timestampMs": 54280,
+    "confidence": 0.9931815266609192
+  },
+  {
+    "text": " This",
+    "startMs": 55160,
+    "endMs": 55800,
+    "timestampMs": 55480,
+    "confidence": 0.7364180088043213
+  },
+  {
+    "text": " isn't",
+    "startMs": 55800,
+    "endMs": 56120,
+    "timestampMs": 55960,
+    "confidence": 0.9637176096439362
+  },
+  {
+    "text": " a",
+    "startMs": 56120,
+    "endMs": 56240,
+    "timestampMs": 56180,
+    "confidence": 0.9788949489593506
+  },
+  {
+    "text": " generic",
+    "startMs": 56240,
+    "endMs": 56620,
+    "timestampMs": 56430,
+    "confidence": 0.9993903636932373
+  },
+  {
+    "text": " barcode,",
+    "startMs": 56620,
+    "endMs": 57140,
+    "timestampMs": 56880,
+    "confidence": 0.9264899492263794
+  },
+  {
+    "text": " it",
+    "startMs": 57460,
+    "endMs": 57600,
+    "timestampMs": 57530,
+    "confidence": 0.9384186863899231
+  },
+  {
+    "text": " is",
+    "startMs": 57600,
+    "endMs": 57700,
+    "timestampMs": 57650,
+    "confidence": 0.8723570704460144
+  },
+  {
+    "text": " a",
+    "startMs": 57700,
+    "endMs": 57780,
+    "timestampMs": 57740,
+    "confidence": 0.9924915432929993
+  },
+  {
+    "text": " precise",
+    "startMs": 57780,
+    "endMs": 58260,
+    "timestampMs": 58020,
+    "confidence": 0.9810024499893188
+  },
+  {
+    "text": " serial",
+    "startMs": 58260,
+    "endMs": 58880,
+    "timestampMs": 58570,
+    "confidence": 0.9947102069854736
+  },
+  {
+    "text": " number",
+    "startMs": 58880,
+    "endMs": 59220,
+    "timestampMs": 59050,
+    "confidence": 0.9929878115653992
+  },
+  {
+    "text": " that",
+    "startMs": 59220,
+    "endMs": 59400,
+    "timestampMs": 59310,
+    "confidence": 0.9912133812904358
+  },
+  {
+    "text": " says,",
+    "startMs": 59400,
+    "endMs": 59640,
+    "timestampMs": 59520,
+    "confidence": 0.9912910461425781
+  },
+  {
+    "text": " blue",
+    "startMs": 59900,
+    "endMs": 60220,
+    "timestampMs": 60060,
+    "confidence": 0.1603611707687378
+  },
+  {
+    "text": " t",
+    "startMs": 60220,
+    "endMs": 60540,
+    "timestampMs": 60380,
+    "confidence": 0.7052038311958313
+  },
+  {
+    "text": "-shirt,",
+    "startMs": 60540,
+    "endMs": 60760,
+    "timestampMs": 60650,
+    "confidence": 0.9326348900794983
+  },
+  {
+    "text": " size",
+    "startMs": 61000,
+    "endMs": 61240,
+    "timestampMs": 61120,
+    "confidence": 0.9657852649688721
+  },
+  {
+    "text": " medium,",
+    "startMs": 61240,
+    "endMs": 61660,
+    "timestampMs": 61450,
+    "confidence": 0.8561060428619385
+  },
+  {
+    "text": " exact",
+    "startMs": 62040,
+    "endMs": 62340,
+    "timestampMs": 62190,
+    "confidence": 0.9897505640983582
+  },
+  {
+    "text": " item",
+    "startMs": 62340,
+    "endMs": 62680,
+    "timestampMs": 62510,
+    "confidence": 0.9814281463623047
+  },
+  {
+    "text": " number",
+    "startMs": 62680,
+    "endMs": 62960,
+    "timestampMs": 62820,
+    "confidence": 0.9905869364738464
+  },
+  {
+    "text": " 4902115,",
+    "startMs": 62960,
+    "endMs": 65040,
+    "timestampMs": 64000,
+    "confidence": 0.8429503887891769
+  },
+  {
+    "text": " it",
+    "startMs": 65780,
+    "endMs": 65920,
+    "timestampMs": 65850,
+    "confidence": 0.9249681234359741
+  },
+  {
+    "text": " is",
+    "startMs": 65920,
+    "endMs": 66060,
+    "timestampMs": 65990,
+    "confidence": 0.9839099645614624
+  },
+  {
+    "text": " completely",
+    "startMs": 66060,
+    "endMs": 66740,
+    "timestampMs": 66400,
+    "confidence": 0.9623121619224548
+  },
+  {
+    "text": " unique",
+    "startMs": 66740,
+    "endMs": 67480,
+    "timestampMs": 67110,
+    "confidence": 0.9960737228393555
+  },
+  {
+    "text": " in",
+    "startMs": 67480,
+    "endMs": 67740,
+    "timestampMs": 67610,
+    "confidence": 0.9940500259399414
+  },
+  {
+    "text": " the",
+    "startMs": 67740,
+    "endMs": 67840,
+    "timestampMs": 67790,
+    "confidence": 0.9931708574295044
+  },
+  {
+    "text": " world.",
+    "startMs": 67840,
+    "endMs": 68180,
+    "timestampMs": 68010,
+    "confidence": 0.9921934008598328
+  },
+  {
+    "text": " The",
+    "startMs": 69260,
+    "endMs": 69580,
+    "timestampMs": 69420,
+    "confidence": 0.9790144562721252
+  },
+  {
+    "text": " radar",
+    "startMs": 69580,
+    "endMs": 69860,
+    "timestampMs": 69720,
+    "confidence": 0.4739827811717987
+  },
+  {
+    "text": " organizes",
+    "startMs": 69860,
+    "endMs": 70640,
+    "timestampMs": 70250,
+    "confidence": 0.898469865322113
+  },
+  {
+    "text": " the",
+    "startMs": 70640,
+    "endMs": 70780,
+    "timestampMs": 70710,
+    "confidence": 0.9939019680023193
+  },
+  {
+    "text": " signals,",
+    "startMs": 70780,
+    "endMs": 71120,
+    "timestampMs": 70950,
+    "confidence": 0.9943880438804626
+  },
+  {
+    "text": " matches",
+    "startMs": 71400,
+    "endMs": 71640,
+    "timestampMs": 71520,
+    "confidence": 0.9747443795204163
+  },
+  {
+    "text": " those",
+    "startMs": 71640,
+    "endMs": 71860,
+    "timestampMs": 71750,
+    "confidence": 0.977963387966156
+  },
+  {
+    "text": " unique",
+    "startMs": 71860,
+    "endMs": 72220,
+    "timestampMs": 72040,
+    "confidence": 0.993898868560791
+  },
+  {
+    "text": " IDs",
+    "startMs": 72220,
+    "endMs": 72620,
+    "timestampMs": 72420,
+    "confidence": 0.9125385284423828
+  },
+  {
+    "text": " to",
+    "startMs": 72620,
+    "endMs": 72840,
+    "timestampMs": 72730,
+    "confidence": 0.9931642413139343
+  },
+  {
+    "text": " the",
+    "startMs": 72840,
+    "endMs": 72960,
+    "timestampMs": 72900,
+    "confidence": 0.9922183752059937
+  },
+  {
+    "text": " database",
+    "startMs": 72960,
+    "endMs": 73340,
+    "timestampMs": 73150,
+    "confidence": 0.9400416016578674
+  },
+  {
+    "text": " and",
+    "startMs": 73340,
+    "endMs": 73840,
+    "timestampMs": 73590,
+    "confidence": 0.3973197638988495
+  },
+  {
+    "text": " calculates",
+    "startMs": 73840,
+    "endMs": 74400,
+    "timestampMs": 74120,
+    "confidence": 0.9893296658992767
+  },
+  {
+    "text": " your",
+    "startMs": 74400,
+    "endMs": 74520,
+    "timestampMs": 74460,
+    "confidence": 0.9625176787376404
+  },
+  {
+    "text": " total",
+    "startMs": 74520,
+    "endMs": 74800,
+    "timestampMs": 74660,
+    "confidence": 0.9941015839576721
+  },
+  {
+    "text": " in",
+    "startMs": 74800,
+    "endMs": 75060,
+    "timestampMs": 74930,
+    "confidence": 0.9974371194839478
+  },
+  {
+    "text": " milliseconds.",
+    "startMs": 75060,
+    "endMs": 75600,
+    "timestampMs": 75330,
+    "confidence": 0.9817267656326294
+  },
+  {
+    "text": " Follow",
+    "startMs": 76380,
+    "endMs": 76680,
+    "timestampMs": 76530,
+    "confidence": 0.6243570446968079
+  },
+  {
+    "text": " for",
+    "startMs": 76680,
+    "endMs": 76880,
+    "timestampMs": 76780,
+    "confidence": 0.8638482093811035
+  },
+  {
+    "text": " more",
+    "startMs": 76880,
+    "endMs": 77080,
+    "timestampMs": 76980,
+    "confidence": 0.9935613870620728
+  },
+  {
+    "text": " system",
+    "startMs": 77080,
+    "endMs": 77440,
+    "timestampMs": 77260,
+    "confidence": 0.6275855898857117
+  },
+  {
+    "text": " architecture.",
+    "startMs": 77440,
+    "endMs": 77760,
+    "timestampMs": 77600,
+    "confidence": 0.997776210308075
+  }
+]

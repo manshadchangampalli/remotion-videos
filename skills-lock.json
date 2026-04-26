@@ -6,6 +6,11 @@
       "sourceType": "github",
       "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
     },
+    "openai-whisper": {
+      "source": "steipete/clawdis",
+      "sourceType": "github",
+      "computedHash": "2f04fe7900baaecfdc63a978cb18239a1ba987497d7c6b85e578622ed6ea82b9"
+    },
     "tailwind-design-system": {
       "source": "wshobson/agents",
       "sourceType": "github",

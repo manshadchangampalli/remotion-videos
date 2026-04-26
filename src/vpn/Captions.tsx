@@ -4,19 +4,20 @@ import { createTikTokStyleCaptions, type Caption, type TikTokPage } from "@remot
 
 interface CaptionsProps {
   captions: Caption[];
+  combineTokensWithinMs?: number;
 }
 
-const SWITCH_CAPTIONS_EVERY_MS = 2500;
+const DEFAULT_SWITCH_CAPTIONS_EVERY_MS = 2500;
 
-export const Captions: React.FC<CaptionsProps> = ({ captions }) => {
+export const Captions: React.FC<CaptionsProps> = ({ captions, combineTokensWithinMs = DEFAULT_SWITCH_CAPTIONS_EVERY_MS }) => {
   const { fps } = useVideoConfig();
 
   const { pages } = useMemo(() => {
     return createTikTokStyleCaptions({
       captions,
-      combineTokensWithinMilliseconds: SWITCH_CAPTIONS_EVERY_MS,
+      combineTokensWithinMilliseconds: combineTokensWithinMs,
     });
-  }, [captions]);
+  }, [captions, combineTokensWithinMs]);
 
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
@@ -25,7 +26,7 @@ export const Captions: React.FC<CaptionsProps> = ({ captions }) => {
         const startFrame = (page.startMs / 1000) * fps;
         const endFrame = nextPage
           ? (nextPage.startMs / 1000) * fps
-          : startFrame + (SWITCH_CAPTIONS_EVERY_MS / 1000) * fps;
+          : startFrame + (combineTokensWithinMs / 1000) * fps;
         const durationInFrames = Math.max(1, endFrame - startFrame);
 
         return (
