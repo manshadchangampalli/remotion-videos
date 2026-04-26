@@ -9,16 +9,16 @@ importers:
   .:
     dependencies:
       '@remotion/captions':
-        specifier: ^4.0.445
+        specifier: 4.0.445
         version: 4.0.445
       '@remotion/cli':
         specifier: 4.0.445
         version: 4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@remotion/google-fonts':
-        specifier: ^4.0.446
-        version: 4.0.446(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: 4.0.445
+        version: 4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@remotion/install-whisper-cpp':
-        specifier: ^4.0.445
+        specifier: 4.0.445
         version: 4.0.445
       '@remotion/tailwind-v4':
         specifier: 4.0.445
@@ -414,8 +414,8 @@ packages:
     peerDependencies:
       eslint: '>=9'
 
-  '@remotion/google-fonts@4.0.446':
-    resolution: {integrity: sha512-5SNDlorJ8cpZMIgW4hi0MeZ5SjHptOL7HI1bSj2NqoFmhIOMwDG/Fuz9FnFs6uSis71O6RH4/mrHQfFn/197EQ==}
+  '@remotion/google-fonts@4.0.445':
+    resolution: {integrity: sha512-Un70KTdcIb/1+wAiclMB5QhS3HzKVkoXkmjTKafgqF6gy0oLLIOUffylOx2rMt2cosQ5cBpLhJc5D6dRH+L31w==}
 
   '@remotion/install-whisper-cpp@4.0.445':
     resolution: {integrity: sha512-UZKSNKNop2ijyAMoQhGPuQElYDYlUxlY/hENhJnqrhF5wF6IiTNyEavFKChcGp8YkzERaZq4JOQWkYeUWGhtvg==}
@@ -1428,12 +1428,6 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
-  remotion@4.0.446:
-    resolution: {integrity: sha512-NkE0d1APetJywF6MJJXE1dlMDXKhQWtlJV3HUfVBd7QUKPmoA3nhFBJaIsCyl/Rve2bmnq8h+yBjAU/skXezcA==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-
   require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
@@ -1993,9 +1987,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@remotion/google-fonts@4.0.446(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@remotion/google-fonts@4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      remotion: 4.0.446(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      remotion: 4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -3069,11 +3063,6 @@ snapshots:
       tslib: 2.8.1
 
   remotion@4.0.445(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
-    dependencies:
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-
-  remotion@4.0.446(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)

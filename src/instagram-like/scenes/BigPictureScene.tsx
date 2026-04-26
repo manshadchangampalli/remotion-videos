@@ -152,17 +152,17 @@ export const BigPictureScene: React.FC = () => {
           </linearGradient>
         </defs>
 
-        {/* Title */}
+        {/* Title bar shifted down to accommodate global Dynamic Island */}
         <g opacity={titleOpacity}>
-          <rect x={0} y={30} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
-          <text x={540} y={85} textAnchor="middle"
+          <rect x={0} y={85} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
+          <text x={540} y={140} textAnchor="middle"
             fill="url(#bpGrad)" fontSize={52}
             fontWeight="900" fontFamily="monospace" letterSpacing={3}
             filter="url(#bpGlow)"
           >
             THE FULL ARCHITECTURE
           </text>
-          <line x1={0} y1={150} x2={1080} y2={150} stroke="url(#bpGrad)" strokeWidth={2} strokeOpacity={0.6} />
+          <line x1={0} y1={205} x2={1080} y2={205} stroke="url(#bpGrad)" strokeWidth={2} strokeOpacity={0.6} />
         </g>
 
         {/* Incoming users label */}

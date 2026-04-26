@@ -9,12 +9,7 @@ import {
   Img,
 } from "remotion";
 
-// Instagram dark-mode colors
-const IG_BG = "#000000";
-const IG_WHITE = "#FFFFFF";
-const IG_GRAY = "#8E8E8E";
-const IG_BLUE = "#0095F6";
-const IG_RED = "#ED4956";
+import { IG_BG, IG_WHITE, IG_GRAY, IG_BLUE, IG_RED } from "../constants";
 
 // SVG Icon paths (Instagram-style)
 const HEART_PATH =
@@ -167,31 +162,8 @@ export const HookScene: React.FC = () => {
           transform: `translateY(${postY}px)`,
         }}
       >
-        {/* ── PHONE STATUS BAR ───────────────────────────────────────────── */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "10px 32px 0",
-            background: IG_BG,
-            color: IG_WHITE,
-            fontFamily: "Outfit, sans-serif",
-            fontSize: 24,
-            fontWeight: 700,
-          }}
-        >
-          <span>12:37</span>
-          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.01 21.49L23.64 7c-.45-.34-4.93-4-11.64-4C5.28 3 .81 6.66.36 7l11.63 14.49.01.01.01-.01z" fillOpacity=".3"/>
-              <path d="M4.77 12.5L12.01 21.49l7.24-8.99C18.85 12.24 16.1 10 12.01 10c-4.09 0-6.84 2.24-7.24 2.5z"/>
-            </svg>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
-            </svg>
-          </div>
-        </div>
+        {/* Status bar removed - now handled globally by DynamicIsland */}
+
 
         {/* ── PROFILE HEADER ─────────────────────────────────────────────── */}
         <div

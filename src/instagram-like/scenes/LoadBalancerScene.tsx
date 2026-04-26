@@ -54,13 +54,21 @@ export const LoadBalancerScene: React.FC = () => {
   // Label badge
   const badgeScale = spring({ frame: frame - 120, fps, config: { damping: 10, stiffness: 140 } });
 
+  // Traffic cop badge appears when audio says it
+  const copBadgeIn = spring({ frame: frame - 150, fps, config: { damping: 9, stiffness: 160 } });
+  
+  // Radar/Pulse effect for the Load Balancer
+  const radarPulse = (frame % 30) / 30;
+  const radarOpacity = interpolate(radarPulse, [0, 0.5, 1], [0, 0.4, 0]);
+  const radarScale = interpolate(radarPulse, [0, 1], [0.8, 1.8]);
+
+  const lbPulse = Math.sin(frame * 0.12) * 0.15 + 0.85;
+
   // Annotation
   const annotOpacity = interpolate(frame, [160, 185], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-
-  const lbPulse = Math.sin(frame * 0.12) * 0.15 + 0.85;
 
   return (
     <AbsoluteFill style={{ opacity: sceneIn * sceneOut }}>
@@ -99,37 +107,25 @@ export const LoadBalancerScene: React.FC = () => {
           </linearGradient>
         </defs>
 
-        {/* Title */}
-        <rect x={0} y={40} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
-        <text x={540} y={91} textAnchor="middle"
+        {/* Title bar shifted down to accommodate global Dynamic Island */}
+        <rect x={0} y={90} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
+        <text x={540} y={141} textAnchor="middle"
           fill="url(#lbGrad)" fontSize={36}
           fontWeight="900" fontFamily="monospace" letterSpacing={2}
           filter="url(#lbGlow)"
         >
           THE LOAD BALANCER
         </text>
-        <line x1={0} y1={118} x2={1080} y2={118} stroke="url(#lbGrad)" strokeWidth={1.5} strokeOpacity={0.4} />
+        <line x1={0} y1={168} x2={1080} y2={168} stroke="url(#lbGrad)" strokeWidth={1.5} strokeOpacity={0.4} />
 
         {/* Incoming crowd label */}
         <g opacity={lbScale}>
-          <text x={540} y={360} textAnchor="middle"
+          <text x={540} y={300} textAnchor="middle"
             fill="rgba(255,255,255,0.7)" fontSize={26}
             fontFamily="monospace" letterSpacing={2}
           >
             5,000,000 USERS
           </text>
-          {/* Arrow pointing down to LB */}
-          {[0, 1, 2, 3, 4].map(i => (
-            <line key={i}
-              x1={400 + i * 70} y1={390}
-              x2={400 + i * 70} y2={450}
-              stroke={`hsl(${270 + i * 15}, 70%, 65%)`}
-              strokeWidth={2.5}
-              strokeLinecap="round"
-              opacity={0.7}
-              markerEnd="url(#arrow)"
-            />
-          ))}
         </g>
 
         {/* Incoming traffic arrows */}
@@ -156,13 +152,36 @@ export const LoadBalancerScene: React.FC = () => {
 
         {/* ─── LOAD BALANCER NODE ─── */}
         <g transform={`translate(${LB_X}, ${LB_Y}) scale(${lbScale})`} opacity={lbScale}>
+          {/* RADAR EFFECT */}
+          {frame > 90 && (
+            <g>
+              <circle 
+                cx={0} cy={0} 
+                r={120 * radarScale} 
+                fill="none" 
+                stroke="url(#lbGrad)" 
+                strokeWidth={4} 
+                opacity={radarOpacity} 
+              />
+              {/* Radiating split lines */}
+              {[0, 45, 90, 135, 180, 225, 270, 315].map(angle => (
+                <line 
+                  key={angle}
+                  x1={0} y1={0}
+                  x2={Math.cos(angle * Math.PI / 180) * 140 * radarScale}
+                  y2={Math.sin(angle * Math.PI / 180) * 140 * radarScale}
+                  stroke="url(#lbGrad)"
+                  strokeWidth={3}
+                  opacity={radarOpacity * 0.5}
+                />
+              ))}
+            </g>
+          )}
+
           {/* Outer aura ring */}
           <circle cx={0} cy={0} r={120 * lbPulse} fill="none"
             stroke="url(#lbGrad)" strokeWidth={2} opacity={0.25}
             filter="url(#lbGlow)"
-          />
-          <circle cx={0} cy={0} r={90 * lbPulse} fill="none"
-            stroke="url(#lbGrad)" strokeWidth={1.5} opacity={0.15}
           />
           {/* Main node */}
           <circle cx={0} cy={0} r={75}
@@ -172,8 +191,17 @@ export const LoadBalancerScene: React.FC = () => {
           />
           {/* Inner circle */}
           <circle cx={0} cy={0} r={52} fill="rgba(64,93,230,0.25)" />
-          {/* Icon: traffic cop / split symbol */}
+          {/* Icon */}
           <text x={0} y={18} textAnchor="middle" fontSize={50}>🚦</text>
+        </g>
+
+        {/* TRAFFIC COP BADGE */}
+        <g transform={`translate(${LB_X + 110}, ${LB_Y - 90}) scale(${copBadgeIn})`} opacity={copBadgeIn}>
+          <rect x={-80} y={-22} width={160} height={44} rx={22} 
+            fill="#405DE6" stroke="#fff" strokeWidth={2} filter="url(#lbStrongGlow)" />
+          <text x={0} y={6} textAnchor="middle" fill="#fff" fontSize={16} fontWeight="900" fontFamily="monospace">
+            👮 TRAFFIC COP
+          </text>
         </g>
 
         {/* LB Label */}

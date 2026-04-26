@@ -56,10 +56,15 @@ const CACHE_DUR        = DATABASE_START     - CACHE_START;
 const DATABASE_DUR     = BIGPICTURE_START   - DATABASE_START;
 const BIGPICTURE_DUR   = TOTAL_FRAMES       - BIGPICTURE_START;
 
+import { DynamicIsland } from "./components/DynamicIsland";
+
 export const InstagramLikeComposition: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#050914", fontFamily: "Outfit, sans-serif" }}>
       <Audio src={staticFile("instagram-like/Instagram-like.wav")} />
+      
+      {/* Global iPhone Notch / Dynamic Island */}
+      <DynamicIsland />
 
       {/* ── Sound Effects ─────────────────────────────────────────────────
           Hook — Ronaldo post reveal: sweep

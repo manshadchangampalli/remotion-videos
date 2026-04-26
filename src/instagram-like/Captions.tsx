@@ -74,14 +74,12 @@ const CaptionPage: React.FC<{ page: TikTokPage }> = ({ page }) => {
     >
       <div
         style={{
-          background: "rgba(255, 255, 255, 0.65)",
-          backdropFilter: "blur(24px) saturate(180%)",
-          WebkitBackdropFilter: "blur(24px) saturate(180%)",
+          background: "rgba(30, 30, 30, 0.92)", // Solid dark background instead of heavy blur
           padding: "32px 64px",
           borderRadius: 48,
-          border: "1px solid rgba(255, 255, 255, 0.4)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
           maxWidth: 960,
-          boxShadow: "0 12px 40px rgba(0,0,0,0.12)",
+          boxShadow: "0 16px 48px rgba(0,0,0,0.4)",
         }}
       >
         <p
@@ -94,7 +92,7 @@ const CaptionPage: React.FC<{ page: TikTokPage }> = ({ page }) => {
             textTransform: "uppercase",
             fontStyle: "italic",
             margin: 0,
-            color: "#000",
+            color: "#fff", // White text on dark BG
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
@@ -108,8 +106,7 @@ const CaptionPage: React.FC<{ page: TikTokPage }> = ({ page }) => {
               <span
                 key={index}
                 style={{
-                  color: isActive ? "#C13584" : "#4b5563",
-                  transition: "color 0.15s ease",
+                  color: isActive ? "#C13584" : "#94a3b8",
                   textShadow: isActive ? "0 0 15px rgba(193, 53, 132, 0.4)" : "none",
                   display: "inline-block",
                   padding: "0 4px",

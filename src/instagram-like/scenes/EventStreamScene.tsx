@@ -198,18 +198,18 @@ export const EventStreamScene: React.FC = () => {
           </clipPath>
         </defs>
 
-        {/* ── TITLE BAR (persistent) ─────────────────────────────────────── */}
-        <rect x={0} y={30} width={1080} height={120} fill="rgba(5,9,20,0.95)" />
-        <text x={540} y={85} textAnchor="middle" fill="url(#esIgGrad)"
+        {/* ── TITLE BAR (persistent) shifted down for Dynamic Island ─────── */}
+        <rect x={0} y={85} width={1080} height={120} fill="rgba(5,9,20,0.95)" />
+        <text x={540} y={140} textAnchor="middle" fill="url(#esIgGrad)"
           fontSize={52} fontWeight="900" fontFamily="monospace" letterSpacing={3}
           filter="url(#esG)">
           THE MESSAGE QUEUE
         </text>
-        <text x={540} y={130} textAnchor="middle"
+        <text x={540} y={185} textAnchor="middle"
           fill="rgba(193,53,132,0.7)" fontSize={24} fontFamily="monospace">
           (Write now, process later — decoupled & fast)
         </text>
-        <line x1={0} y1={150} x2={1080} y2={150} stroke="url(#esIgGrad)" strokeWidth={2} strokeOpacity={0.6} />
+        <line x1={0} y1={205} x2={1080} y2={205} stroke="url(#esIgGrad)" strokeWidth={2} strokeOpacity={0.6} />
 
         {/* ═══════════════════════════════════════════════════════════════════
             PHASE 1 — "5M writes? Database can't handle it"

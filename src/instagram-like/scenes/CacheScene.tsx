@@ -108,20 +108,20 @@ export const CacheScene: React.FC = () => {
           </linearGradient>
         </defs>
 
-        {/* Title */}
-        <rect x={0} y={30} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
-        <text x={540} y={85} textAnchor="middle"
+        {/* Title bar shifted down to accommodate global Dynamic Island */}
+        <rect x={0} y={85} width={1080} height={120} fill="rgba(5,9,20,0.9)" />
+        <text x={540} y={140} textAnchor="middle"
           fill="url(#cacheGrad)" fontSize={52}
           fontWeight="900" fontFamily="monospace" letterSpacing={3}
           filter="url(#cacheGlow)"
         >
           REDIS CACHE
         </text>
-        <text x={540} y={130} textAnchor="middle"
+        <text x={540} y={185} textAnchor="middle"
           fill="rgba(252,175,69,0.7)" fontSize={24} fontFamily="monospace">
           (Sub-millisecond reads — permanent leaderboard)
         </text>
-        <line x1={0} y1={150} x2={1080} y2={150} stroke="url(#cacheGrad)" strokeWidth={2} strokeOpacity={0.6} />
+        <line x1={0} y1={205} x2={1080} y2={205} stroke="url(#cacheGrad)" strokeWidth={2} strokeOpacity={0.6} />
 
         {/* ─── EVENT STREAM NODE (left) ─── */}
         <g transform={`translate(${STREAM_X}, ${STREAM_Y}) scale(${streamScale * 1.1})`} opacity={streamScale}>

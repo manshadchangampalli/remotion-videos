@@ -100,16 +100,16 @@ export const BottleneckScene: React.FC = () => {
           </linearGradient>
         </defs>
 
-        {/* Title bar */}
-        <rect x={0} y={40} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
-        <text x={540} y={91} textAnchor="middle"
+        {/* Title bar shifted down to accommodate global Dynamic Island */}
+        <rect x={0} y={90} width={1080} height={78} fill="rgba(5,9,20,0.9)" />
+        <text x={540} y={141} textAnchor="middle"
           fill="url(#bnGrad)" fontSize={36}
           fontWeight="900" fontFamily="monospace" letterSpacing={2}
           filter="url(#bnGlow)"
         >
           THE BOTTLENECK PROBLEM
         </text>
-        <line x1={0} y1={118} x2={1080} y2={118} stroke="url(#bnGrad)" strokeWidth={1.5} strokeOpacity={0.4} />
+        <line x1={0} y1={168} x2={1080} y2={168} stroke="url(#bnGrad)" strokeWidth={1.5} strokeOpacity={0.4} />
 
         {/* ─── PHASE 1: Single door being overwhelmed ─── */}
         <g opacity={1 - phase2}>
